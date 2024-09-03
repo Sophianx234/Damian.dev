@@ -1,10 +1,11 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import Homepage from "./ui/Homepage"
+import Homepage from "./pages/Homepage"
 import AppLayout from "./ui/AppLayout"
-import Projects from "./ui/Projects"
-import Resume from "./ui/Resume"
-import Contact from "./ui/Contact"
-import About from "./ui/About"
+import Projects from "./pages/Projects"
+import Resume from "./pages/Resume"
+import Contact from "./pages/Contact"
+import About from "./pages/About"
+import PageNotFound from "./pages/PageNotFound"
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
     <Route path="/contact" element={<Contact/>}/>
 
 
+
     </Route>
+    <Route path="*" element={<PageNotFound/>}/>
+    
    </Routes>
    </BrowserRouter>
   )
