@@ -5,7 +5,7 @@ import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 function Header() {
     const {isOpen, setIsOpen} = useTrigger(TriggerContext)
   return (
-    <div className=" grid grid-cols-2 items-center px-14 pt-8 pb-7 shadow-md ">
+    <div className=" grid grid-cols-2 items-center px-14 pt-8 pb-7 shadow-md  md:fixed md:left-0 md:right-0  z-10 bg-white">
       <h1 className="text-2xl font-semibold text-zinc-700 
       ">Damian.dev</h1>
     <div>

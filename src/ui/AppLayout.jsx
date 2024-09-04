@@ -3,11 +3,11 @@ import Header from "./Header"
 
 function AppLayout() {
     return (
-        <div className="z-0">
-            <nav>
+        <div className="">
+            <nav >
                 <Header/>
             </nav>
-            <main>
+            <main >
                 <Outlet/>
             </main>
         </div>

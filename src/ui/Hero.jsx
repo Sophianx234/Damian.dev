@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="md:grid md:grid-cols-[2fr_1fr]  flex-col-reverse flex items-center gap-8 max-w-6xl mx-auto mt-16  ">
+    <div className="md:grid md:grid-cols-[2fr_1fr]  flex-col-reverse flex items-center gap-8 max-w-6xl mx-auto pt-28 relative -z-50  ">
       <div className="space-y-7">
         <h1 className="md:text-7xl antialiased text-zinc-700 text-4xl text-center md:text-left  font-bold mt-4 ">
           Front-End React Developer <img src="./images/waving.png" className="w-[4rem] inline" alt="" />
