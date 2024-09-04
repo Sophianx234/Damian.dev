@@ -12,7 +12,7 @@ function NavLinks({type}) {
 
     return (
 
-        <ul className={`${type==='dropdown'? 'flex flex-col absolute left-0 right-0 top-0 bottom-0 justify-center items-center backdrop-blur-xl transition-all animate-slide ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl   font-medium text-zinc-700  md:flex 
+        <ul className={`${type==='dropdown'? 'flex flex-col absolute left-0 right-0 top-0 bottom-0 justify-center items-center backdrop-blur-xl transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl   font-medium text-zinc-700  md:flex 
         `}>
            { isOpen && <button className="z-auto absolute right-10 top-10"
             onClick={()=>setIsOpen(isOpen=>!isOpen)}>

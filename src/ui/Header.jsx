@@ -1,4 +1,4 @@
-import { HiBars3, HiMiniXMark } from "react-icons/hi2";
+import { HiBars3 } from "react-icons/hi2";
 import NavLinks from "./NavLinks";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 
@@ -10,7 +10,9 @@ function Header() {
       ">Damian.dev</h1>
     <div>
     <NavLinks/>
-   { isOpen && <NavLinks type='dropdown'/>}
+    
+  {isOpen && <NavLinks type='dropdown'/>}
+
 
       <div className="flex justify-end md:hidden">
         <button onClick={()=>setIsOpen(isOpen=>!isOpen)}>

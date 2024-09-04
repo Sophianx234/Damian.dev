@@ -13,13 +13,18 @@ export default {
         "secondary-purple-950":'#080717',
       },
       keyframes: {
-        slide: {
+        slidein: {
           '0%': { transform: 'translateX(-30rem)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        slideout: {
+          '0%': { transform: 'translateX(0)' },
+          '100%':  { transform: 'translateX(-30rem)' },
         }
       },
       animation: {
-        slide: 'slide .3s ease-in-out ',
+        slidein: 'slidein .3s ease-in-out ',
+        slideout: 'slideout .3s ease-out ',
       }
       
       
