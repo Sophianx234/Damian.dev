@@ -3,7 +3,7 @@ import Header from "./Header"
 
 function AppLayout() {
     return (
-        <div>
+        <div className="z-0">
             <nav>
                 <Header/>
             </nav>

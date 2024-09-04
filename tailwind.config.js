@@ -2,6 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    
     fontFamily: {
       sans: ["Poppins", "Montserrat", "Mulish"],
     },
@@ -11,7 +12,18 @@ export default {
         "secondary-purple-700":"#282373",
         "secondary-purple-950":'#080717',
       },
-    },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(-30rem)' },
+          '100%': { transform: 'translateX(0)' },
+        }
+      },
+      animation: {
+        slide: 'slide .3s ease-in-out ',
+      }
+      
+      
   },
+},
   plugins: [],
 };
