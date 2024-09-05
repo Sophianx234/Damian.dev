@@ -9,7 +9,7 @@ function TechStack() {
         <div className="">
 
 
-        <div className="max-w-6xl py-16  mx-auto  md:grid md:grid-cols-2">
+        <div className="max-w-6xl py-16  mx-auto  md:grid md:grid-cols-2 md:px-10 ">
             <p className=" font-semibold text-slate-700 flex items-center gap-8">
                 <span className="text-xl">
                     Tech Stack
