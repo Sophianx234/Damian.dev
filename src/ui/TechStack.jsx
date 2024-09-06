@@ -9,21 +9,25 @@ function TechStack() {
         <div className="">
 
 
-        <div className="max-w-6xl py-16  mx-auto  md:grid md:grid-cols-2 md:px-10 ">
+        <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:grid md:grid-cols-2 md:px-10 ">
             <p className=" font-semibold text-slate-700 flex items-center gap-8">
                 <span className="text-xl">
                     Tech Stack
                     </span> 
-                     <span className="text-slate-400 font-extralight  text-4xl">&#124;</span>
+                     <span className="text-slate-400 font-extralight  text-4xl hidden md:block">&#124;</span>
                 </p>
-                <div>
+                <div className="">
+                    
+
                     <IconsStack>
                         <HtmlIcon/>
                         <JsTsIcon/>
                         <ReactNextIcon/>
                         <TailwindIcon/>
                     </IconsStack>
-                </div>
+                
+                
+                    </div>
         </div>
         </div>
     )
