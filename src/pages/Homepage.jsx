@@ -1,3 +1,4 @@
+import AboutSection from "../ui/aboutSection"
 import Footer from "../ui/Footer"
 import Hero from "../ui/Hero"
 import TechStack from "../ui/TechStack"
@@ -10,6 +11,7 @@ function Homepage() {
             <Hero/>
             </div>
             <TechStack/>
+            <AboutSection/>
         <footer>
             <Footer/>
         </footer>
