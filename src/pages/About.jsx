@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
+import Footer from "../ui/Footer"
 
 function About() {
     return (
+        <>
         <div className=" md:grid md:grid-cols-[1.5fr_3fr] items-center gap-10 bg-gray-100 ">
             <div className="bg-gradient-to-b from-stone-600 to-slate-500">
 
@@ -18,10 +20,12 @@ Since starting my journey in web development, I've focused on honing my skills a
 I'm always eager to take on new projects and collaborate with others who share my passion for creating innovative web solutions. If you're looking for a dedicated developer to bring your ideas to life, feel free to reach out.
 
                 </p>
-                <Link className="mt-4 inline-block bg-secondary-purple px-12 py-3 font-[Montserrat] font-bold text-white z-0 " to='/contact'>Contact</Link>
+                <Link className="mt-4 inline-block bg-secondary-purple px-12 py-3 font-[Montserrat] font-bold text-white z-0 rounded-sm " to='/contact'>Contact</Link>
             </div>
             
         </div>
+        <Footer type='about'/>
+        </>
     )
 }
 
