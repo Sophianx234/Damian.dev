@@ -14,8 +14,8 @@ function Header() {
   {isOpen && <NavLinks type='dropdown'/>}
 
 
-      <div className="flex justify-end md:hidden">
-        <button onClick={()=>setIsOpen(isOpen=>!isOpen)}>
+      <div className="flex  lg:hidden md:flex justify-end">
+        <button className="" onClick={()=>setIsOpen(isOpen=>!isOpen)}>
     <HiBars3 size={32}/>
         </button>
       </div>

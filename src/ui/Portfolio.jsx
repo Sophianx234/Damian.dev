@@ -4,9 +4,9 @@ import { GoLinkExternal } from "react-icons/go"
 function Portfolio({name, desc, emoji, cssFramework ='CSS', image, flow, imageNum}) {
     return (
         <div>
-            <div className={`flex  justify-between   
+            <div className={`flex  justify-between md:flex-col  md:items-center lg:px-0 md:px-10  
                 
-            gap-20 ${flow ==='swap' && "flex-row-reverse"}`}>
+            gap-20 ${flow ==='swap' ? "lg:flex-row-reverse":"lg:flex-row"}`}>
                 <img src={`./images/p-${imageNum}.png`} alt="" className="w-[40rem] bg-blend-multiply rounded-md" />
                 <div className="">
                     <h1 className="text-xl font-bold  text-center pb-4 text-slate-700 uppercase">{name} {emoji}</h1>
