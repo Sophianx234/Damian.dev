@@ -1,27 +1,27 @@
 function AboutSection() {
     return (
-        <div className="bg-[#F9F9F9]
-        flex lg:flex-row md:flex-col  md:items-center lg:items-start
-        space-y-9 md:pt-20 md:pb-20 lg:pb-0 lg:pt-0 lg:pr-10 
+        <div className="lg:max-w-6xl lg:mx-auto  lg:pb-20 ">
+
+        <div className="
+        flex lg:flex-row md:flex-col  md:items-center lg:justify-center 
+        space-y-9 md:pt-20 md:pb-20 lg:pb-20 lg:pt-0  lg:gap-10  
         ">
 
-            <img src="./images/desktop.png" alt="" className="md:w-[30rem] lg:h-full
-            md:rounded-md lg:rounded-none
+            <img src="./images/desktop.png" alt="" className="md:w-[30rem] lg:h-[26rem] lg:rounded-md
+            md:rounded-md 
             " />
-            <div className="flex flex-col items-center lg:items-start px-20 space-y-7 lg:space-y-3">
+            <div className="flex flex-col items-center lg:items-start md:px-20 lg:px-10 space-y-7 lg:space-y-3 ">
                 <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg ">About Me</h1>
                 <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700">Front-end Developer <br /> based in Tamale, Ghana 📍 </h2>
-                <div className="space-y-6 text-zinc-600 lg:space-y-2 lg:pt-2">
+                <div className="space-y-6 text-zinc-600 lg:space-y-2 lg:pt-2 ">
 
-                <p className="text-xl text-center lg:text-left ">
+                <p className="text-xl text-center  lg:text-left lg:pb-3 ">
                 Hey, my name is Sophian Abdul Rahman, and I'm a Frontend Developer.  My passion lies in creating a clean optimized UI/UX  for my users.
-                <span className="md:hidden lg:inline">
-                    My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.
-                    </span> 
+                
 
 
                 </p>
-                <p className=" lg:hidden text-xl text-center lg:text-left md:block">
+                <p className="  text-xl text-center lg:text-left ">
                 My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.
                 </p>
                 <div className="md:text-center lg:text-left">
@@ -30,6 +30,7 @@ function AboutSection() {
                 </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

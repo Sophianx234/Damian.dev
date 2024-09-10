@@ -4,7 +4,7 @@ import Footer from "../ui/Footer"
 function About() {
     return (
         <>
-        <div className=" md:grid md:grid-cols-[1.5fr_3fr] items-center gap-10 bg-gray-100 ">
+        <div className=" md:grid md:grid-cols-[1.5fr_3fr] items-center gap-10   bg-gray-100 ">
             <div className="bg-gradient-to-b from-stone-600 to-slate-500">
 
             <img src="./images/damian-10.jpg" alt="not found" className="h-screen w-full object-cover mix-blend-overlay" />
