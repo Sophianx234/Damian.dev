@@ -1,21 +1,21 @@
 import { BsGithub } from "react-icons/bs"
 import { GoLinkExternal } from "react-icons/go"
 
-function Portfolio({name, desc, emoji, cssFramework ='CSS', image, flow}) {
+function Portfolio({name, desc, emoji, cssFramework ='CSS', image, flow, imageNum}) {
     return (
         <div>
-            <div className={`flex  justify-between pt-24 
+            <div className={`flex  justify-between   
                 
             gap-20 ${flow ==='swap' && "flex-row-reverse"}`}>
-                <img src="./images/p-1.png" alt="" className="w-[40rem] bg-blend-multiply" />
+                <img src={`./images/p-${imageNum}.png`} alt="" className="w-[40rem] bg-blend-multiply rounded-md" />
                 <div className="">
                     <h1 className="text-xl font-bold  text-center pb-4 text-slate-700 uppercase">{name} {emoji}</h1>
                     <p className="text-md text-slate-700 text-center px-10">
                     {desc}
                     </p>
                     <div className="flex items-center justify-center pt-4 gap-10 font-bold text-slate-700">
-                        <p>React</p>
-                        <p>{cssFramework}</p>
+                        <p className="cursor-pointer">React</p>
+                        <p className="cursor-pointer">{cssFramework}</p>
                     </div>
                     <div>
                         <div className="flex gap-28 pt-6 justify-center ">
