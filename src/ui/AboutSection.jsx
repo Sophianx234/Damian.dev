@@ -1,4 +1,4 @@
-import { Fade, Slide, Zoom } from "react-awesome-reveal"
+import { Fade} from "react-awesome-reveal"
 
 function AboutSection() {
     return (

@@ -1,4 +1,3 @@
-import { useContext, useState } from "react"
 import { HiMiniXMark } from "react-icons/hi2"
 import { NavLink } from "react-router-dom"
 import { TriggerContext,  useTrigger } from "../contexts/StatesContext"

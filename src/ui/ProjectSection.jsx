@@ -1,7 +1,5 @@
-import { BsGithub } from "react-icons/bs"
-import { GoLinkExternal } from "react-icons/go"
 import Portfolio from "./Portfolio"
-import { Bounce, Slide } from "react-awesome-reveal"
+import {  Slide } from "react-awesome-reveal"
 
 function ProjectSection() {
     return (

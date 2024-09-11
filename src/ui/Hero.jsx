@@ -1,9 +1,5 @@
-import { AiOutlineGithub } from "react-icons/ai";
-import { IoLogoLinkedin } from "react-icons/io";
-import { NavLink } from "react-router-dom";
 import Handles from "./Handles";
-import { TriggerContext, useTrigger } from "../contexts/StatesContext";
-import { AttentionSeeker, Bounce, Fade, Slide } from "react-awesome-reveal";
+import { AttentionSeeker,  Fade, Slide } from "react-awesome-reveal";
 
 function Hero() {
   
