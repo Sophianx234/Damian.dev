@@ -22,13 +22,15 @@ function NavLinks({type}) {
          <HiMiniXMark size={32}/>
             </button>}
         <li>
-          <NavLink to="/home" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
+          <NavLink to="#section-hero" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
             Home
             
             </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>About</NavLink>
+          <a  href='#section-tech' className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
+            
+            About</a>
         </li>
         <li>
           <NavLink to="/projects" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Projects</NavLink>

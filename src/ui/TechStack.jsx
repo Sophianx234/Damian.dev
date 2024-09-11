@@ -7,7 +7,7 @@ import TailwindIcon from "./TailwindIcon"
 
 function TechStack() {
     return (
-        <div className="">
+        <section id='section-tech' className="">
 
 
         <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10 
@@ -50,7 +50,7 @@ function TechStack() {
                 
                     </div>
         </div>
-        </div>
+        </section>
     )
 }
 

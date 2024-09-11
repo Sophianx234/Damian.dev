@@ -3,7 +3,6 @@ import NavLinks from "./NavLinks";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 import { WiMoonAltWaxingCrescent4 } from "react-icons/wi";
 import { GoSun } from "react-icons/go";
-import { button } from "framer-motion/client";
 
 function Header() {
     const {isOpen, setIsOpen, isDark, setIsDark} = useTrigger(TriggerContext)

@@ -3,12 +3,12 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Handles from "./Handles";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
-import { Bounce, Fade, Slide } from "react-awesome-reveal";
+import { AttentionSeeker, Bounce, Fade, Slide } from "react-awesome-reveal";
 
 function Hero() {
   
   return (
-    <div className="bg-[#F9F9F9] lg:h-dvh  md:px-6 dark:bg-[#272F38] ">
+    <section id="section-hero" className="bg-[#F9F9F9] lg:h-dvh  md:px-6 dark:bg-[#272F38] ">
 
     <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto pt-28   pb-16 relative z-0  
      ">
@@ -55,7 +55,7 @@ function Hero() {
       <Fade triggerOnce>
 
       <Slide direction="right" triggerOnce >
-
+    
         <img
           src="./images/damian-bg-7.png"
           alt="could not find image"
@@ -64,18 +64,21 @@ function Hero() {
           </Slide   >
             </Fade>
           <div className="overflow-hidden rounded-full h-80   ">
-    <Bounce triggerOnce>
+            <AttentionSeeker effect="pulse">
+
+    
 
         <img
           src="./images/damian-7.jpg"
           alt="could not find image"
           className=" md:w-80 w-64 rounded-full scale-125  md:scale-[1.2] hidden   dark:block  object-center md:self-start  "
           />
-          </Bounce>
+          
+          </AttentionSeeker>
           </div>
       </div>
           </div>
-    </div>
+    </section>
   );
 }
 
