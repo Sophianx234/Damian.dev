@@ -2,6 +2,8 @@ import { useContext, useState } from "react"
 import { HiMiniXMark } from "react-icons/hi2"
 import { NavLink } from "react-router-dom"
 import { TriggerContext,  useTrigger } from "../contexts/StatesContext"
+import { WiMoonAltWaxingCrescent4 } from "react-icons/wi"
+import { GoSun } from "react-icons/go"
 
 function NavLinks({type}) {
     
@@ -12,7 +14,7 @@ function NavLinks({type}) {
 
     return (
 
-        <ul className={`${type==='dropdown'? 'flex flex-col absolute  left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex 
+        <ul className={`${type==='dropdown'? 'flex flex-col absolute  left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex dark:text-white
         `}>
            { isOpen && <button className="z-auto absolute right-10 top-10"
             onClick={()=>setIsOpen(isOpen=>!isOpen)}>
@@ -36,6 +38,10 @@ function NavLinks({type}) {
         </li>
         <li>
           <NavLink to="/contact" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Contact</NavLink>
+        </li>
+        <li className="flex">
+        <WiMoonAltWaxingCrescent4 size={32} className="fill-neutral-900" />
+        <GoSun  size={32} className="dark:fill-white"/>
         </li>
       </ul>
 

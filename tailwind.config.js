@@ -11,6 +11,7 @@ export default {
         "secondary-purple": "#4F46E5",
         "secondary-purple-700":"#282373",
         "secondary-purple-950":'#080717',
+        "dark-color": '#060B10'
       },
       keyframes: {
         slidein: {
@@ -31,4 +32,5 @@ export default {
   },
 },
   plugins: [],
+  darkMode: 'class',
 };

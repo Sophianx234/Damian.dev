@@ -7,7 +7,7 @@ import TechStack from "../ui/TechStack"
 
 function Homepage() {
     return (
-        <div>
+        <div className="dark">
             
 
             <Hero/>

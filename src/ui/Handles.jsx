@@ -9,10 +9,10 @@ function Handles({type}) {
 
             <NavLink to='https://www.linkedin.com/in/sophian-abdul-rahman-909125230/'>
 
-            <IoLogoLinkedin className={`hover:fill-secondary-purple transition-all duration-200 block  ${type&& 'size-8 inline-block'}`} size={type? 46:36} color={`${type?'#fff':'#3F3F46'}`}/>
+            <IoLogoLinkedin className={`hover:fill-secondary-purple transition-all duration-200 block dark:fill-white  ${type&& 'size-8 inline-block'}`} size={type? 46:36} color={`${type?'#fff':'#3F3F46'}`}/>
             </NavLink>
             <NavLink to='https://github.com/Sophianx234' >
-            <AiOutlineGithub className={`hover:fill-secondary-purple transition-all  duration-200 block  ${type&& 'size-8 inline-block'}`} size={type? 46:36} color={`${type?'#fff':'#3F3F46'}`}/>
+            <AiOutlineGithub className={`hover:fill-secondary-purple transition-all  duration-200 block dark:fill-white ${type&& 'size-8 inline-block'}`} size={type? 46:36} color={`${type?'#fff':'#3F3F46'}`}/>
 
 
             </NavLink>

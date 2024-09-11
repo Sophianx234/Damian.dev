@@ -5,9 +5,9 @@ import Handles from "./Handles";
 
 function Hero() {
   return (
-    <div className="bg-[#F9F9F9] lg:h-dvh  md:px-6 ">
+    <div className="bg-[#F9F9F9] lg:h-dvh  md:px-6 dark:bg-[#272F38] ">
 
-    <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto pt-28   pb-16 relative z-0 
+    <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto pt-28   pb-16 relative z-0  
      ">
 
       <div className="md:space-y-10 flex space-y-4 flex-col sm:space-y-4 items-center 
@@ -16,14 +16,14 @@ function Hero() {
         lg:text-7xl antialiased text-zinc-700 sm:text-center  sm:text-3xl text-2xl  lg:text-left md:text-center  font-bold  md:w-full lg:w-full mt-8
          ">
 
-          <span>
+          <span className="dark:text-white">
              Front-End React <br /> Developer <span className="text-red-500 sm:text-green-500 md:text-blue-500 lg:text-yellow-500">
               X
               </span>
               <img src="./images/waving.png" className="md:w-[4rem] w-10 inline" alt="" />
             </span>
         </h1>
-        <p className="   md:text-2xl font-[Mulish] text-base md:text-center lg:text-left text-center sm:text-center text-slate-600  ">
+        <p className="   md:text-2xl font-[Mulish] text-base md:text-center lg:text-left text-center sm:text-center text-slate-600  dark:text-gray-200">
           Hi, I'm Damian X. A passionate Front-end React <br /> Developer based in
           Tamale, Ghana. 📍
         </p>
@@ -34,8 +34,16 @@ function Hero() {
         <img
           src="./images/damian-bg-7.png"
           alt="could not find image"
-          className="md:w-80 w-64 rounded-full scale-125 md:scale-125  md:self-start "
+          className="md:w-80 w-64 rounded-full scale-125 md:scale-125 dark:hidden md:self-start "
           />
+          <div className="overflow-hidden rounded-full h-80   ">
+
+        <img
+          src="./images/damian-7.jpg"
+          alt="could not find image"
+          className=" md:w-80 w-64 rounded-full scale-125  md:scale-[1.2] hidden   dark:block  object-center md:self-start  "
+          />
+          </div>
       </div>
           </div>
     </div>
