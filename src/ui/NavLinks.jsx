@@ -7,7 +7,7 @@ import { GoSun } from "react-icons/go"
 
 function NavLinks({type}) {
     
-    const {setIsOpen, isOpen} = useTrigger(TriggerContext)
+    const {setIsOpen, isOpen, isDark, setIsDark} = useTrigger(TriggerContext)
     console.log(isOpen)
 
     
@@ -39,14 +39,25 @@ function NavLinks({type}) {
         <li>
           <NavLink to="/contact" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Contact</NavLink>
         </li>
-        <li className="flex">
-        <WiMoonAltWaxingCrescent4 size={32} className="fill-neutral-900" />
-        <GoSun  size={32} className="dark:fill-white"/>
+        <li className={`flex ${type === 'dropdown' && 'hidden'} `}>
+
+        <div className="flex">
+          
+          <button onClick={()=>setIsDark(dark=>!dark)}>
+
+        { isDark?<GoSun  size={32} className="dark:fill-white"/>:
+          <WiMoonAltWaxingCrescent4 size={32} className="fill-neutral-900" />
+        }  
+          </button>
+
+        </div>
         </li>
+      
       </ul>
 
       
     )
-}
+  }
+
 
 export default NavLinks

@@ -1,3 +1,4 @@
+import { TriggerContext, useTrigger } from "../contexts/StatesContext"
 import AboutSection from "../ui/aboutSection"
 import ContactSection from "../ui/ContactSection"
 import Footer from "../ui/Footer"
@@ -6,8 +7,9 @@ import ProjectSection from "../ui/ProjectSection"
 import TechStack from "../ui/TechStack"
 
 function Homepage() {
+    const {isDark} = useTrigger(TriggerContext)
     return (
-        <div className="dark">
+        <div className={`${isDark && 'dark'}`}>
             
 
             <Hero/>

@@ -3,7 +3,9 @@ import {  TbMapSearch } from "react-icons/tb"
 
 function ContactSection() {
     return (
-        <div className="max-w-6xl pt-16 mx-auto lg:h-[32rem] lg:flex lg:items-center md:py-24 lg:py-0 dark:bg-[#021526] pb-20">
+        <div className="dark:bg-[rgb(2,21,38)]">
+
+        <div className="max-w-6xl pt-16 mx-auto lg:h-[32rem] lg:flex lg:items-center md:py-24 lg:py-0  pb-20">
             <div className=" space-y-4 ">
 
             <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat] text-center 
@@ -48,6 +50,7 @@ function ContactSection() {
                 </div>
             </div>
         </div>
+                </div>
             </div>
     )
 }

@@ -2,8 +2,10 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Handles from "./Handles";
+import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 
 function Hero() {
+  
   return (
     <div className="bg-[#F9F9F9] lg:h-dvh  md:px-6 dark:bg-[#272F38] ">
 

@@ -3,10 +3,13 @@ import { createContext, useContext, useState } from "react";
 const TriggerContext = createContext()
 function TriggerProvider({children}) {
     const [isOpen,setIsOpen] = useState(false)
+    const [isDark, setIsDark] = useState(false)
     return (
         <TriggerContext.Provider value={{
             isOpen,
-             setIsOpen
+             setIsOpen,
+             isDark,
+             setIsDark
         }}>
             {children}
             
