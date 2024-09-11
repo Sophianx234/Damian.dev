@@ -1,6 +1,7 @@
 import { BsGithub } from "react-icons/bs"
 import { GoLinkExternal } from "react-icons/go"
 import Portfolio from "./Portfolio"
+import { Bounce, Slide } from "react-awesome-reveal"
 
 function ProjectSection() {
     return (
@@ -10,8 +11,11 @@ function ProjectSection() {
         ">
         <div className="lg:max-w-6xl lg:mx-auto md:pt-24 pt-10 pb-20 lg:pt-20  
         ">
+            <Slide triggerOnce>
+
             <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg text-center lg:text-left">Portfolio</h1>
             <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 md:px-10 lg:px-0 text-2xl dark:text-slate-100">Each project is a unique piece of development 🧩</h2>
+            </Slide>
 
             <div className="space-y-40 pt-20 ">
 

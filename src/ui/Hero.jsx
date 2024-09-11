@@ -3,6 +3,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Handles from "./Handles";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
+import { Bounce, Fade, Slide } from "react-awesome-reveal";
 
 function Hero() {
   
@@ -14,35 +15,63 @@ function Hero() {
 
       <div className="md:space-y-10 flex space-y-4 flex-col sm:space-y-4 items-center 
       md:items-start justify-center lg:pt-10">
+        <Slide triggerOnce>
+
+        <Fade triggerOnce>
+
         <h1 className="md:text-6xl 
         lg:text-7xl antialiased text-zinc-700 sm:text-center  sm:text-3xl text-2xl  lg:text-left md:text-center  font-bold  md:w-full lg:w-full mt-8
-         ">
+        ">
 
-          <span className="dark:text-white">
+          <span className="dark:text-white headline">
              Front-End React <br /> Developer
               <img src="./images/waving.png" className="md:w-[4rem] w-10 inline" alt="" />
             </span>
         </h1>
+          </Fade>
+          </Slide>
+          
+
+
+
+        <Fade triggerOnce>
+          <Slide triggerOnce>
         <p className="   md:text-2xl font-[Mulish] text-base md:text-center lg:text-left text-center sm:text-center text-slate-600  dark:text-gray-200">
           Hi, I'm Damian X. A passionate Front-end React <br /> Developer based in
           Tamale, Ghana. 📍
         </p>
 
+          </Slide>
+        </Fade>
+        <Fade triggerOnce >
+
+          <Slide triggerOnce>
+
         <Handles/>
+          </Slide>
+        </Fade>
       </div>
       <div className="flex justify-center ">
+      <Fade triggerOnce>
+
+      <Slide direction="right" triggerOnce >
+
         <img
           src="./images/damian-bg-7.png"
           alt="could not find image"
           className="md:w-80 w-64 rounded-full scale-125 md:scale-125 dark:hidden md:self-start "
           />
+          </Slide   >
+            </Fade>
           <div className="overflow-hidden rounded-full h-80   ">
+    <Bounce triggerOnce>
 
         <img
           src="./images/damian-7.jpg"
           alt="could not find image"
           className=" md:w-80 w-64 rounded-full scale-125  md:scale-[1.2] hidden   dark:block  object-center md:self-start  "
           />
+          </Bounce>
           </div>
       </div>
           </div>

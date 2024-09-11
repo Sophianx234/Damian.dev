@@ -2,7 +2,7 @@ import Handles from "./Handles"
 
 function Footer({type}) {
     return (
-        <div className="bg-[#2D2E32] ">
+        <footer id="section-footer" className="bg-[#2D2E32] ">
 
         <div className={`md:max-w-6xl mx-auto ${type? 'md:py-10':'md:py-16'} py-8 md:px-10 px-10`} >
             <div className="flex justify-between">
@@ -21,7 +21,7 @@ function Footer({type}) {
             </div>
             </div>
         </div>
-        </div>
+        </footer>
     )
 }
 

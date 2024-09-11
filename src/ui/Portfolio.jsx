@@ -1,3 +1,4 @@
+import { Fade, Slide } from "react-awesome-reveal"
 import { BsGithub } from "react-icons/bs"
 import { GoLinkExternal } from "react-icons/go"
 
@@ -6,10 +7,22 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
         <div>
             <div className={`flex  justify-between
             flex-col  items-center lg:px-0 md:px-10  
-                
+            
             gap-20 ${flow ==='swap' ? "lg:flex-row-reverse":"lg:flex-row"}`}>
-                <img src={`./images/p-${imageNum}.png`} alt="" className="md:w-[40rem]  w-[30rem] bg-blend-multiply rounded-md" />
+                <Slide triggerOnce direction={flow ==='swap'? 'right': 'left'}>
+                    <Fade triggerOnce>
+
+
+                <img src={`./images/p-${imageNum}.png`} alt="" className="md:w-full  w-[30rem] bg-blend-multiply rounded-md" />
+                    </Fade>
+                </Slide>
                 <div className="">
+                    <Slide 
+                    triggerOnce direction={flow ==='swap'?  'left':'right'}
+                    >
+                        <Fade triggerOnce>
+
+
                     <h1 className="text-xl font-bold  text-center pb-4 text-slate-700 uppercase dark:text-slate-100">{name} {emoji}</h1>
                     <p className="text-base text-slate-700 text-center md:px-10 px-20 dark:text-stone-300">
                     {desc}
@@ -32,6 +45,8 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
                             </a>
                         </div>
                     </div>
+                        </Fade>
+                                </Slide>
                 </div>
             </div>
             

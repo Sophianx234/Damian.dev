@@ -1,3 +1,4 @@
+import { Fade, Slide } from "react-awesome-reveal"
 import HtmlIcon from "./HtmlIcon"
 import IconsStack from "./IconsStack"
 import JsTsIcon from "./JsTsIcon"
@@ -12,6 +13,10 @@ function TechStack() {
         <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10 
         
         ">
+            <Slide triggerOnce>
+                <Fade triggerOnce>
+
+
             <p className=" font-semibold text-slate-700 flex md:flex-col lg:flex-row items-center gap-8 lg:gap-8 md:gap-0 dark:text-white">
                 <span className="text-xl md:border-b-[3px] 
                 border-[#9f9d9d] dark:border-[#fff]
@@ -24,7 +29,13 @@ function TechStack() {
                     Tech Stack
                    </span>
                 </p>
+                    </Fade>
+            </Slide>
                 <div className="">
+                <Slide triggerOnce direction="right">
+
+                <Fade triggerOnce>
+
                     
 
                     <IconsStack>
@@ -34,6 +45,8 @@ function TechStack() {
                         <TailwindIcon/>
                     </IconsStack>
                 
+                </Fade>
+                </Slide>
                 
                     </div>
         </div>

@@ -1,11 +1,15 @@
+import { Fade, Slide, Zoom } from "react-awesome-reveal"
+
 function AboutSection() {
     return (
-        <div className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0 ">
+        <section id="section-about" className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0 ">
 
+            <Fade duration={2000} triggerOnce >
         <div className="
         flex lg:flex-row flex-col  items-center lg:justify-center 
         space-y-9 md:pt-20 md:pb-20 lg:pb-20 lg:pt-0  lg:gap-10  
         ">
+
 
             <img src="./images/desktop.png" alt="" className="md:w-[30rem]  w-96 lg:h-[26rem] lg:rounded-md
             rounded-md 
@@ -31,7 +35,8 @@ function AboutSection() {
                 </div>
             </div>
         </div>
-        </div>
+            </Fade>
+        </section>
     )
 }
 

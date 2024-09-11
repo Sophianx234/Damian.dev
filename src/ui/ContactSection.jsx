@@ -1,9 +1,11 @@
+import { Slide } from "react-awesome-reveal"
 import { LuMail } from "react-icons/lu"
 import {  TbMapSearch } from "react-icons/tb"
 
 function ContactSection() {
     return (
-        <div className="dark:bg-[rgb(2,21,38)]">
+        <section id="section-contact" className="dark:bg-[rgb(2,21,38)]">
+            <Slide triggerOnce>
 
         <div className="max-w-6xl pt-16 mx-auto lg:h-[32rem] lg:flex lg:items-center md:py-24 lg:py-0  pb-20">
             <div className=" space-y-4 ">
@@ -51,7 +53,8 @@ function ContactSection() {
             </div>
         </div>
                 </div>
-            </div>
+                </Slide>
+            </section>
     )
 }
 
