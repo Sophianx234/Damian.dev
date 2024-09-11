@@ -10,11 +10,13 @@ function NavLinks({type}) {
     const {setIsOpen, isOpen, isDark, setIsDark} = useTrigger(TriggerContext)
     console.log(isOpen)
 
-    
+    function handleClose(){
+      setIsOpen(false)
+    }
 
     return (
 
-        <ul className={`${type==='dropdown'? 'flex flex-col absolute  left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex dark:text-white
+        <ul className={`${type==='dropdown'? 'flex flex-col absolute  left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex dark:bg-dark-color dark:text-white
         `}>
            { isOpen && <button className="z-auto absolute right-10 top-10"
             onClick={()=>setIsOpen(isOpen=>!isOpen)}>
@@ -22,24 +24,27 @@ function NavLinks({type}) {
          <HiMiniXMark size={32}/>
             </button>}
         <li>
-          <NavLink to="#section-hero" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
+          <a href="#section-hero" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple' onClick={handleClose}>
             Home
             
-            </NavLink>
+            </a>
         </li>
         <li>
-          <a  href='#section-tech' className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
+          <a  href='#section-about' className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple' onClick={handleClose}>
             
             About</a>
         </li>
         <li>
-          <NavLink to="/projects" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Projects</NavLink>
+          <a href="#section-projects" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'
+          onClick={handleClose}>Projects</a>
         </li>
         <li>
-          <NavLink to="/resume" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Resume</NavLink>
+          <NavLink to="/resume" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'
+          onClick={handleClose}>Resume</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Contact</NavLink>
+          <a href="#section-contact" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'
+          onClick={handleClose}>Contact</a>
         </li>
         <li className={`flex ${type === 'dropdown' && 'hidden'} `}>
 

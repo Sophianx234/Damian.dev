@@ -13,7 +13,7 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
                     <Fade triggerOnce>
 
 
-                <img src={`./images/p-${imageNum}.png`} alt="" className="md:w-full  w-[30rem] bg-blend-multiply rounded-md" />
+                <img src={`./images/p-${imageNum}.png`} alt="" className="  scale-125 lg:w-[120rem] w-[30rem] bg-blend-multiply rounded-md" />
                     </Fade>
                 </Slide>
                 <div className="">

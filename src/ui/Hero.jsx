@@ -43,9 +43,9 @@ function Hero() {
 
           </Slide>
         </Fade>
-        <Fade triggerOnce >
+        <Fade triggerOnce  className="w-full">
 
-          <Slide triggerOnce>
+          <Slide triggerOnce className="w-full" >
 
         <Handles/>
           </Slide>

@@ -14,7 +14,7 @@ function Homepage() {
 
             <Hero/>
             
-<div className="dark:bg-[#021526]">
+<div id="section-about" className="dark:bg-[#021526]">
 
             <TechStack/>
             <AboutSection/>

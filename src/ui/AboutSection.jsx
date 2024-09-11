@@ -2,7 +2,7 @@ import { Fade, Slide, Zoom } from "react-awesome-reveal"
 
 function AboutSection() {
     return (
-        <section id="section-about" className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0 ">
+        <section  className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0 ">
 
             <Fade duration={2000} triggerOnce >
         <div className="

@@ -6,7 +6,7 @@ import { Bounce, Slide } from "react-awesome-reveal"
 function ProjectSection() {
     return (
         
-        <div className="bg-[#F9F9F9] dark:bg-[#272F38]
+        <section id="section-projects" className="bg-[#F9F9F9] dark:bg-[#272F38]
         
         ">
         <div className="lg:max-w-6xl lg:mx-auto md:pt-24 pt-10 pb-20 lg:pt-20  
@@ -47,7 +47,7 @@ function ProjectSection() {
             />
             </div>
             </div>
-        </div>
+        </section>
     )
 }
 
