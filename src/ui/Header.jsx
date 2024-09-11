@@ -3,8 +3,12 @@ import NavLinks from "./NavLinks";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 import { WiMoonAltWaxingCrescent4 } from "react-icons/wi";
 import { GoSun } from "react-icons/go";
+import { useEffect } from "react";
 
 function Header() {
+  useEffect(function(){
+    document.body.style.zoom = "90%";
+  },[])
     const {isOpen, setIsOpen, isDark, setIsDark} = useTrigger(TriggerContext)
   return (
     <div className={`w-screen ${isDark && 'dark'} `}>

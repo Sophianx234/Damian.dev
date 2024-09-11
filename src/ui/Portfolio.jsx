@@ -6,14 +6,14 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
     return (
         <div>
             <div className={`flex  justify-between
-            flex-col  items-center lg:px-0 md:px-10  
+            flex-col  items-center lg:px-10 md:px-10  
             
             gap-20 ${flow ==='swap' ? "lg:flex-row-reverse":"lg:flex-row"}`}>
                 <Slide triggerOnce direction={flow ==='swap'? 'right': 'left'}>
                     <Fade triggerOnce>
 
 
-                <img src={`./images/p-${imageNum}.png`} alt="" className="  scale-125 lg:w-[120rem] w-[30rem] bg-blend-multiply rounded-md" />
+                <img src={`./images/p-${imageNum}.png`} alt="" className="  scale-125 lg:w-[110rem]   w-[30rem] bg-blend-multiply rounded-md" />
                     </Fade>
                 </Slide>
                 <div className="">
