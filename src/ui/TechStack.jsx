@@ -9,12 +9,12 @@ function TechStack() {
         <div className="">
 
 
-        <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10
+        <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10 
         
         ">
-            <p className=" font-semibold text-slate-700 flex md:flex-col lg:flex-row items-center gap-8 lg:gap-8 md:gap-0">
+            <p className=" font-semibold text-slate-700 flex md:flex-col lg:flex-row items-center gap-8 lg:gap-8 md:gap-0 dark:text-white">
                 <span className="text-xl md:border-b-[3px] 
-                border-[#9f9d9d]
+                border-[#9f9d9d] dark:border-[#fff]
                 lg:border-r-[3px] 
                 lg:pr-8
                 lg:py-1

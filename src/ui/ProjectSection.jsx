@@ -5,13 +5,13 @@ import Portfolio from "./Portfolio"
 function ProjectSection() {
     return (
         
-        <div className="bg-[#F9F9F9]
+        <div className="bg-[#F9F9F9] dark:bg-[#272F38]
         
         ">
         <div className="lg:max-w-6xl lg:mx-auto md:pt-24 pt-10 pb-20 lg:pt-20  
         ">
             <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg text-center lg:text-left">Portfolio</h1>
-            <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 md:px-10 lg:px-0 text-2xl">Each project is a unique piece of development 🧩</h2>
+            <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 md:px-10 lg:px-0 text-2xl dark:text-slate-100">Each project is a unique piece of development 🧩</h2>
 
             <div className="space-y-40 pt-20 ">
 

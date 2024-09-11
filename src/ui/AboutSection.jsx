@@ -12,16 +12,16 @@ function AboutSection() {
             " />
             <div className="flex flex-col items-center lg:items-start md:px-20 lg:px-10 space-y-7 lg:space-y-3 ">
                 <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg ">About Me</h1>
-                <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700">Front-end Developer <br /> based in Tamale, Ghana 📍 </h2>
+                <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 dark:text-slate-100">Front-end Developer <br /> based in Tamale, Ghana 📍 </h2>
                 <div className="space-y-6 text-zinc-600 lg:space-y-2 lg:pt-2 px-28 md:px-0">
 
-                <p className="md:text-xl text-center  lg:text-left lg:pb-3 text-sm">
+                <p className="md:text-xl text-center  lg:text-left lg:pb-3 text-sm dark:text-slate-200">
                 Hey, my name is Sophian Abdul Rahman, and I'm a Frontend Developer.  My passion lies in creating a clean optimized UI/UX  for my users.
                 
 
 
                 </p>
-                <p className="  md:text-xl text-center lg:text-left  text-sm">
+                <p className="  md:text-xl text-center lg:text-left dark:text-slate-200  text-sm">
                 My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.
                 </p>
                 <div className="text-center lg:text-left">

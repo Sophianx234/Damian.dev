@@ -12,9 +12,11 @@ function Homepage() {
 
             <Hero/>
             
+<div className="dark:bg-[#021526]">
 
             <TechStack/>
             <AboutSection/>
+</div>
             <ProjectSection/>
             <ContactSection/>
         <footer>

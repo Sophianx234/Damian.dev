@@ -17,9 +17,7 @@ function Hero() {
          ">
 
           <span className="dark:text-white">
-             Front-End React <br /> Developer <span className="text-red-500 sm:text-green-500 md:text-blue-500 lg:text-yellow-500">
-              X
-              </span>
+             Front-End React <br /> Developer
               <img src="./images/waving.png" className="md:w-[4rem] w-10 inline" alt="" />
             </span>
         </h1>
