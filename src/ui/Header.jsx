@@ -5,8 +5,10 @@ import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 function Header() {
     const {isOpen, setIsOpen} = useTrigger(TriggerContext)
   return (
-    <div className=" grid grid-cols-2 items-center px-14 pt-8 pb-7 shadow-md  md:fixed md:left-0 md:right-0  z-10 bg-white">
-      <h1 className="text-2xl font-semibold text-zinc-700 
+    <div className="w-screen">
+
+    <div className=" flex justify-between items-center px-14 pt-8 pb-7 shadow-md w-full  fixed left-0 right-0  z-10 bg-white">
+      <h1 className="md:text-2xl  font-semibold text-base text-zinc-700 
       ">Damian.dev</h1>
     <div>
     <NavLinks/>
@@ -14,13 +16,14 @@ function Header() {
   {isOpen && <NavLinks type='dropdown'/>}
 
 
-      <div className="flex  lg:hidden md:flex justify-end">
+      <div className="flex  lg:hidden  justify-end">
         <button className="" onClick={()=>setIsOpen(isOpen=>!isOpen)}>
     <HiBars3 size={32}/>
         </button>
       </div>
     </div>
 
+    </div>
     </div>
   );
 }

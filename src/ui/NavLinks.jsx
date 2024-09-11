@@ -12,7 +12,7 @@ function NavLinks({type}) {
 
     return (
 
-        <ul className={`${type==='dropdown'? 'flex flex-col absolute left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' md:hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex 
+        <ul className={`${type==='dropdown'? 'flex flex-col absolute  left-0 right-0 h-screen justify-center items-center bg-white  transition-all animate-slidein ease-in duration-300':' hidden justify-end '}  items-center gap-6 text-xl z-10  font-medium text-zinc-700  lg:flex 
         `}>
            { isOpen && <button className="z-auto absolute right-10 top-10"
             onClick={()=>setIsOpen(isOpen=>!isOpen)}>
@@ -20,7 +20,10 @@ function NavLinks({type}) {
          <HiMiniXMark size={32}/>
             </button>}
         <li>
-          <NavLink to="/home" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>Home</NavLink>
+          <NavLink to="/home" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>
+            Home
+            
+            </NavLink>
         </li>
         <li>
           <NavLink to="/about" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'>About</NavLink>

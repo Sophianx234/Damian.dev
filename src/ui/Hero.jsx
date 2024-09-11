@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="bg-[#F9F9F9] lg:h-dvh  md:px-6 ">
 
-    <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto md:pt-28 md:pb-16 relative z-0 
+    <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto pt-28   pb-16 relative z-0 
      ">
 
       <div className="md:space-y-10 flex space-y-4 flex-col sm:space-y-4 items-center 
@@ -17,7 +17,9 @@ function Hero() {
          ">
 
           <span>
-             Front-End React <br /> Developer
+             Front-End React <br /> Developer <span className="text-red-500 sm:text-green-500 md:text-blue-500 lg:text-yellow-500">
+              X
+              </span>
               <img src="./images/waving.png" className="md:w-[4rem] w-10 inline" alt="" />
             </span>
         </h1>

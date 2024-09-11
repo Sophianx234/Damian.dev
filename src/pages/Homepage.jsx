@@ -8,10 +8,11 @@ import TechStack from "../ui/TechStack"
 function Homepage() {
     return (
         <div>
-            <div >
+            
 
             <Hero/>
-            </div>
+            
+
             <TechStack/>
             <AboutSection/>
             <ProjectSection/>
@@ -19,6 +20,8 @@ function Homepage() {
         <footer>
             <Footer/>
         </footer>
+            <div className="hidden">
+            </div>
         </div>
     )
 }

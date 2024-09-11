@@ -1,5 +1,7 @@
 function TailwindIcon({size=256}) {
     return (
+      <div className="pr-10 md:pr-0">
+
         
   <svg width="104.25" height="48" viewBox="0 0 556 256" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
     
@@ -12,6 +14,7 @@ function TailwindIcon({size=256}) {
         </g>
         
   </svg>
+      </div>
   
     )
 }

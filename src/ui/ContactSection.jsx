@@ -3,17 +3,17 @@ import {  TbMapSearch } from "react-icons/tb"
 
 function ContactSection() {
     return (
-        <div className="md:max-w-6xl mx-auto lg:h-[32rem] lg:flex lg:items-center md:py-24 lg:py-0">
+        <div className="max-w-6xl pt-16 mx-auto lg:h-[32rem] lg:flex lg:items-center md:py-24 lg:py-0 pb-20">
             <div className=" space-y-4 ">
 
-            <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat] md:text-center 
-            lg:text-left md:text-lg">
+            <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat] text-center 
+            lg:text-left text-lg">
                 Contact
             </h1>
-            <h2 className="md:text-3xl font-semibold  text-center lg:text-left  md:text-center text-slate-700 md:px-24 lg:px-0">Let’s connect and create something amazing! 🚀👇 </h2>
-            <div className="flex items-center gap-20 md:flex-col lg:flex-row pt-16">
-                <div className="flex md:flex-col 
-                lg:flex-row items-center md:items-center md:justify-center gap-8 ">
+            <h2 className="md:text-3xl font-semibold text-2xl text-center lg:text-left   text-slate-700 px-24 lg:px-0">Let’s connect and create something amazing! 🚀👇 </h2>
+            <div className="flex items-center gap-20 flex-col lg:flex-row pt-16">
+                <div className="flex flex-col 
+                lg:flex-row items-center md:items-center justify-center gap-8 ">
 
                 <div className="shadow-sm   w-fit p-2 rounded-full
                 shadow-slate-400
@@ -25,11 +25,11 @@ function ContactSection() {
                 />
                 </div>
                 <div>
-                    <h4 className="text-xl font-semibold text-slate-700 md:text-center lg:text-left">Location</h4>
+                    <h4 className="text-xl font-semibold text-slate-700 text-center lg:text-left">Location</h4>
                     <p className="text-lg text-slate-700 hover:text-secondary-purple transition-all duration-100 cursor-pointer">Tamale, Ghana</p>
                 </div>
                 </div>
-                <div className="flex items-center gap-4 md:flex-col lg:flex-row">
+                <div className="flex items-center gap-4 flex-col lg:flex-row">
 
                 <div className="shadow-sm   w-fit p-2 rounded-full
                 shadow-slate-400">
@@ -40,10 +40,10 @@ function ContactSection() {
                 />
                 </div>
                 <div className="">
-                    <h4 className="text-xl font-semibold  md:text-center lg:text-left text-slate-700">Mail</h4>
-                    <p
-                    className="text-lg text-slate-700 hover:text-secondary-purple transition-all duration-100 cursor-pointer"
-                    >dx4336969@gmail.com</p>
+                    <h4 className="text-xl font-semibold  text-center lg:text-left text-slate-700">Mail</h4>
+                    <a 
+                    className="text-lg text-slate-700 hover:text-secondary-purple transition-all duration-100 cursor-pointer" href="mailto:dx4336969@gmail.com"
+                     >dx4336969@gmail.com</a>
                 </div>
                 </div>
             </div>
