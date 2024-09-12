@@ -12,11 +12,11 @@ function Modal() {
     }
     function handleClose(e){
         setIsOpenModal(false)
-        dismountModal()
+        
     }
     return (
-    <div className="backdrop-blur-lg absolute  top-0 left-0 right-0 bottom-0 z-10  ">
-<div className=" flex justify-center absolute top-32 left-48    ">
+    <div className="backdrop-blur-lg fixed top-0 left-0 right-0 bottom-0 z-[2]  ">
+<div className="  flex justify-center items-end mt-40   ">
 
     <div className="grid grid-cols-[1fr_1.5fr] items-center  max-w-6xl  bg-white z-10 px-20 py-10 shadow-lg ">
         <img src="./images/damian-1.jpg" alt="" className="w-72 justify-self-center"/>

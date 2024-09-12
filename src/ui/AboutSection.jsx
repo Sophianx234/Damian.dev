@@ -6,8 +6,12 @@ import Modal from "./Modal"
 function AboutSection() {
     const {isOpenModal, setIsOpenModal} = useTrigger(TriggerContext)
     function mountModal(e) {
-        document.body.style.overflow = 'hidden';
         setIsOpenModal(true)
+        
+    }
+    function handleOpen(e){
+        document.body.style.overflow = 'hidden';
+
     }
     return (
         <section  className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0  ">
