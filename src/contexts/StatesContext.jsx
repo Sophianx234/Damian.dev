@@ -4,12 +4,15 @@ const TriggerContext = createContext()
 function TriggerProvider({children}) {
     const [isOpen,setIsOpen] = useState(false)
     const [isDark, setIsDark] = useState(false)
+    const [isOpenModal, setIsOpenModal] = useState(false)
     return (
         <TriggerContext.Provider value={{
             isOpen,
              setIsOpen,
              isDark,
-             setIsDark
+             setIsDark,
+             setIsOpenModal,
+             isOpenModal
         }}>
             {children}
             
