@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className={`w-screen ${isDark && 'dark'} z-30 `}>
 
-    <div className=" flex justify-between items-center px-8 md:px-14 pt-8 pb-7 shadow-md w-full  fixed left-0 right-0  z-10 bg-white dark:bg-dark-color">
+    <div className=" flex justify-between items-center px-8 md:px-14 pt-8 md:pb-7 pb-5 shadow-md w-full  fixed left-0 right-0  z-10 bg-white dark:bg-dark-color">
       <h1 className="md:text-2xl  font-semibold text-base text-zinc-700 dark:text-white
       ">Damian.dev</h1>
     <div>

@@ -12,19 +12,19 @@ function Homepage() {
 
   return (
     <div className={` ${isDark && "dark"} `}>
-<div className="hidden">
       <Hero />
 
       <div id="section-about" className=" relative dark:bg-[#021526]">
         <TechStack />
+<div className="hidden">
         <AboutSection />
         {isOpenModal && <Modal />}
-      </div>
       <ProjectSection />
       <ContactSection />
       <footer>
         <Footer />
       </footer>
+      </div>
       <div className="hidden"></div>
 </div>
     </div>
