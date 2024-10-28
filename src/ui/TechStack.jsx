@@ -10,10 +10,10 @@ import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri"
 
 function TechStack() {
     return (
-        <section id='section-tech' className="">
+        <section id='section-tech' className="overflow-hidden">
 
 
-        <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10 
+        <div className="flex flex-col items-center gap-6 max-w-6xl py-16  mx-auto  md:flex lg:grid-cols-2 lg:grid md:px-10  md:gap-10 overflow-hidden
         
         ">
             <Slide triggerOnce>
@@ -52,22 +52,22 @@ function TechStack() {
                     <div className="sm:hidden flex gap-6">
                         <div className="flex items-center gap-[2px]">
 
-                        <FaHtml5 className="size-14 dark:fill-white"/>
-                        <FaCss3Alt className="size-14 dark:fill-white" />
+                        <FaHtml5 className="size-14  dark:fill-white"/>
+                        <FaCss3Alt className=" size-14 dark:fill-white" />
                         </div>
                         <div className="flex items-center gap-[2px]">
 
-                        <FaJsSquare className="size-14 dark:fill-white " />
-                        <BiLogoTypescript className="size-16 dark:fill-white"/>
+                        <FaJsSquare className=" size-14  dark:fill-white " />
+                        <BiLogoTypescript className=" size-16  dark:fill-white"/>
                         </div>
                         <div className="flex items-center gap-[2px]">
 
-                        <FaReact className="size-14 dark:fill-white" />
-                        <RiNextjsLine className="size-14 dark:fill-white" />
+                        <FaReact className=" size-14  dark:fill-white" />
+                        <RiNextjsLine className=" size-14  dark:fill-white" />
                         </div>
                         <div className="flex items-center gap-[8px]">
-                        <RiTailwindCssFill className="size-14 dark:fill-white" />
-                        <FaNodeJs className="size-14 dark:fill-white" />
+                        <RiTailwindCssFill className=" size-14  dark:fill-white" />
+                        <FaNodeJs className=" size-14  dark:fill-white" />
                         </div>
                     </div>
                 
