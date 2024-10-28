@@ -4,7 +4,7 @@ import { AttentionSeeker,  Fade, Slide } from "react-awesome-reveal";
 function Hero() {
   
   return (
-    <section id="section-hero" className="bg-[#F9F9F9] md:h-[100%]  md:px-6 dark:bg-[#272F38]  ">
+    <section id="section-hero" className="bg-[#F9F9F9] md:h-[35rem]  md:px-6 dark:bg-[#272F38]  ">
 
     <div className=" lg:grid-cols-[2fr_1fr] lg:grid flex-col-reverse flex items-center gap-8 md:max-w-6xl mx-auto pt-28   pb-16 relative z-0  
      ">

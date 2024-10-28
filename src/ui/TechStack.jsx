@@ -4,6 +4,9 @@ import IconsStack from "./IconsStack"
 import JsTsIcon from "./JsTsIcon"
 import ReactNextIcon from "./ReactNextIcon"
 import TailwindIcon from "./TailwindIcon"
+import { FaCss3Alt, FaHtml5, FaJsSquare, FaNode, FaNodeJs, FaReact } from "react-icons/fa"
+import { BiLogoTypescript } from "react-icons/bi"
+import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri"
 
 function TechStack() {
     return (
@@ -37,6 +40,7 @@ function TechStack() {
                 <Fade triggerOnce>
 
                     
+                    <div className="hidden sm:flex ">
 
                     <IconsStack>
                         <HtmlIcon/>
@@ -44,6 +48,28 @@ function TechStack() {
                         <ReactNextIcon/>
                         <TailwindIcon/>
                     </IconsStack>
+                    </div>
+                    <div className="sm:hidden flex gap-6">
+                        <div className="flex items-center gap-[2px]">
+
+                        <FaHtml5 className="size-14 dark:fill-white"/>
+                        <FaCss3Alt className="size-14 dark:fill-white" />
+                        </div>
+                        <div className="flex items-center gap-[2px]">
+
+                        <FaJsSquare className="size-14 dark:fill-white " />
+                        <BiLogoTypescript className="size-16 dark:fill-white"/>
+                        </div>
+                        <div className="flex items-center gap-[2px]">
+
+                        <FaReact className="size-14 dark:fill-white" />
+                        <RiNextjsLine className="size-14 dark:fill-white" />
+                        </div>
+                        <div className="flex items-center gap-[8px]">
+                        <RiTailwindCssFill className="size-14 dark:fill-white" />
+                        <FaNodeJs className="size-14 dark:fill-white" />
+                        </div>
+                    </div>
                 
                 </Fade>
                 </Slide>
