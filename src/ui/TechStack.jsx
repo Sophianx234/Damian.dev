@@ -40,7 +40,7 @@ function TechStack() {
                 <Fade triggerOnce>
 
                     
-                    <div className="hidden sm:flex ">
+                    <div className="hidden md:flex ">
 
                     <IconsStack>
                         <HtmlIcon/>
@@ -49,7 +49,7 @@ function TechStack() {
                         <TailwindIcon/>
                     </IconsStack>
                     </div>
-                    <div className="sm:hidden flex gap-6">
+                    <div className="md:hidden  sm:flex hidden gap-6">
                         <div className="flex items-center gap-[2px]">
 
                         <FaHtml5 className="size-14  dark:fill-white"/>
@@ -69,7 +69,20 @@ function TechStack() {
                         <RiTailwindCssFill className=" size-14  dark:fill-white" />
                         <FaNodeJs className=" size-14  dark:fill-white" />
                         </div>
+
+                        
                     </div>
+
+                    <div className="flex sm:hidden items-center justify-center gap-1 px-[10rem]">
+                        <FaHtml5 className="size-[2.5rem]  dark:fill-white"/>
+                        <FaCss3Alt className=" size-[2.5rem] dark:fill-white" />
+                        <FaJsSquare className=" size-[2.5rem]  dark:fill-white " />
+                        <BiLogoTypescript className=" size-[2.8rem]  dark:fill-white"/>
+                        <FaReact className=" size-[2.5rem]  dark:fill-white" />
+                        <RiNextjsLine className=" size-[2.5rem]  dark:fill-white" />
+                        <RiTailwindCssFill className=" size-[2.5rem]  dark:fill-white" />
+                        <FaNodeJs className=" size-[2.5rem]  dark:fill-white" />
+                        </div>
                 
                 </Fade>
                 </Slide>
