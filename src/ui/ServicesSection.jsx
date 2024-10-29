@@ -1,5 +1,6 @@
 import { DiSnapSvg } from "react-icons/di"
-import { FaGears } from "react-icons/fa6"
+import { FaGears, FaServer } from "react-icons/fa6"
+import { IoIosBug } from "react-icons/io"
 import { MdOutlineScreenshotMonitor } from "react-icons/md"
 
 function ServicesSection() {
@@ -13,7 +14,7 @@ function ServicesSection() {
 
         </div>
 
-        <div className="grid grid-cols-2 max-w-2xl gap-14 mx-auto pt-10 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 max-w-2xl gap-x-8 gap-y-6 mx-auto pt-10  px-32 md:px-0">
         <div className="shadow-md bg-[#F9F9F9] hover:scale-105 transition-all flex   items-center justify-center  rounded-lg py-6 ">
             <div className="flex-col items-center justify-center ">
 
@@ -45,12 +46,27 @@ Cross-Browser Compatibility
         <div className="shadow-md bg-[#F9F9F9] flex items-center justify-center  rounded-lg py-6 transition-all hover:scale-105">
             <div className="flex-col items-center justify-center ">
 
-        <FaGears className="size-28 fill-zinc-700 justify-self-center " />
+            <IoIosBug className="size-28 fill-zinc-700 justify-self-center " />
         <div className="pt-2 space-y-1">
 
-        <p className="text-center uppercase font-semibold text-slate-700 font-[Montserrat]">Back-end</p>
+        <p className="text-center uppercase font-semibold text-slate-700 font-[Montserrat]">Testing & Debugging</p>
         <p className="text-center text-zinc-500 font-semibold text-xs px-4">
-        API Integration, Database Management, Authentication 
+        Performance Profiling, 
+Memory Leak Detection, 
+Error Handling
+            </p>
+        </div>
+            </div>
+        </div>
+        <div className="shadow-md bg-[#F9F9F9] flex items-center justify-center  rounded-lg py-6 transition-all hover:scale-105">
+            <div className="flex-col items-center justify-center ">
+
+            <FaServer className="size-28 fill-zinc-700 justify-self-center " />
+        <div className="pt-2 space-y-1">
+
+        <p className="text-center uppercase font-semibold text-slate-700 font-[Montserrat]">Database Management</p>
+        <p className="text-center text-zinc-500 font-semibold text-xs px-4">
+        MySQL, PostgreSQLMongoDB,  supabase
             </p>
         </div>
             </div>
