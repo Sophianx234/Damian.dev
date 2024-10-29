@@ -38,7 +38,7 @@ function NavLinks({type}) {
           onClick={handleClose}>Projects</a>
         </li>
         <li>
-          <NavLink to="/resume" className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'
+          <NavLink to='#section-hero' className='hover:text-secondary-purple transition-all duration-[.3s] [&.active]:text-secondary-purple'
           onClick={handleClose}>Resume</NavLink>
         </li>
         <li>
