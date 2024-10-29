@@ -24,12 +24,10 @@ function Homepage() {
         {isOpenModal && <Modal />}
       <ProjectSection />
       <ContactSection />
-<div className="hidden">
       <footer>
         <Footer />
       </footer>
-      <div className="hidden"></div>
-      </div>
+
 </div>
     </div>
   );

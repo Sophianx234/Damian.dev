@@ -26,7 +26,7 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
 
 
                     <h1 className="text-xl font-bold  text-center pb-4 text-slate-700 uppercase dark:text-slate-100">{name} {emoji}</h1>
-                    <p className="text-base text-slate-700 text-center md:px-10 px-20 dark:text-stone-300">
+                    <p className="text-base text-slate-700 text-center md:px-10 px-10 dark:text-stone-300">
                     {desc}
                     </p>
                     <div className="flex items-center justify-center pt-4 gap-10 font-bold text-slate-700">
