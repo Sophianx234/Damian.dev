@@ -15,7 +15,7 @@ function ProjectSection() {
             <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 md:px-10 lg:px-0 text-2xl dark:text-slate-100">Each project is a unique piece of development 🧩</h2>
             </Slide>
 
-            <div className="space-y-40 pt-20 ">
+            <div className="space-y-40  pt-20 ">
 
             <Portfolio
             name = 'Use Popcorn '

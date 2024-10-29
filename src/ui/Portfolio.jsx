@@ -12,8 +12,10 @@ function Portfolio({name, desc,liveLink='#',codeLink, emoji, cssFramework ='CSS'
                 <Slide triggerOnce direction={flow ==='swap'? 'right': 'left'}>
                     <Fade triggerOnce>
 
+<div className="mx-16">
 
                 <img src={`./images/p-${imageNum}.png`} alt="" className="  scale-125 lg:w-[110rem]   w-[30rem] bg-blend-multiply rounded-md" />
+</div>
                     </Fade>
                 </Slide>
                 <div className="">

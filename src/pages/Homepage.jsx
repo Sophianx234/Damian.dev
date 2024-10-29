@@ -22,9 +22,9 @@ function Homepage() {
         <Progress/>
         <AboutSection />
         {isOpenModal && <Modal />}
-<div className="hidden">
       <ProjectSection />
       <ContactSection />
+<div className="hidden">
       <footer>
         <Footer />
       </footer>
