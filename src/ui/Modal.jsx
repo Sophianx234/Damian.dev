@@ -14,22 +14,22 @@ function Modal() {
     }
     return (
     <div className="backdrop-blur-lg fixed top-0 left-0  right-0 bottom-0 z-[2]  ">
-<div className="  flex justify-center items-end mt-40   ">
+<div className="  flex justify-center items-end mt-[10%]  ">
 
-    <div className="lg:grid flex lg:grid-cols-[1fr_1.5fr] md:grid-cols-2 items-center  lg:max-w-6xl max-w-2xl   bg-white z-10 lg:px-20 lg:py-10 shadow-lg dark:bg-[#021526] dark:pr-4">
-        <img src="./images/damian-1.jpg" alt="" className=" lg:w-72 w-72 justify-self-center"/>
+    <div className="lg:grid flex lg:grid-cols-[5fr_1.5fr] md:grid-cols-2 items-center  lg:max-w-2xl max-w-2xl   bg-white z-10 lg:pr-9 space-x-4 shadow-lg dark:bg-[#021526] dark:pr-4">
+        <img src="./images/damian-1.jpg" alt="" className=" lg:w-screen w-72 justify-self-center"/>
 
         <div className="relative">
             <div className="lg:flex lg:justify-end hidden ">
 
-            <button onClick={handleClose} className="relative   lg:right-[-4rem]  lg:top-[-2rem]  "><IoCloseOutline size={32} color="#000" className="size-7   lg:size-9 dark:fill-white"/></button>
+            <button onClick={handleClose} className="   absolute -top-[13%] -right-[5%]  "><IoCloseOutline size={32} color="#000" className="size-6   lg:size-7 dark:fill-white"/></button>
             </div>
             <div className="lg:hidden lg:justify-end flex absolute top-[-2rem] right-[10px] ">
 
             <button onClick={handleClose} className="relative   lg:right-[-4rem]  lg:top-[-2rem]  "><IoCloseOutline size={32} color="#000" className="size-7 lg:size-9 dark:stroke-slate-50"/></button>
             </div>
 
-        <p className="font-[Mulish] lg:w-[38rem] w-[22rem] text-justify  lg:text-base text-slate-800 z-20 text-xs px-6 lg:px-0 dark:text-white ">
+        <p className="font-[Mulish] lg:max-w-[38rem] w-[22rem] text-justify  lg:text-xs text-slate-800 z-20 text-xs  px-6 lg:px-0 dark:text-white ">
 
 I'm Sophian Abdul Rahman also known as Damian X, a Front-end React Developer based in Ghana. With a strong foundation in HTML, CSS, JavaScript, and React, I specialize in building dynamic, responsive, and user-friendly web applications. My passion lies in crafting seamless digital experiences that not only look great but also perform optimally.
 <br />

@@ -9,12 +9,9 @@ function AboutSection() {
         setIsOpenModal(true)
         
     }
-    function handleOpen(e){
-        document.body.style.overflow = 'hidden';
-
-    }
+    
     return (
-        <section  className="lg:max-w-6xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0  ">
+        <section  className="lg:max-w-5xl lg:mx-auto  lg:pb-20 pb-16 md:pb-0  ">
             
 
             <Fade duration={2000} triggerOnce >
@@ -24,21 +21,21 @@ function AboutSection() {
         ">
 
 
-            <img src="./images/desktop.png" alt="" className="md:w-[30rem]  w-96 lg:h-[26rem] lg:rounded-md
+            <img src="./images/d-2.png" alt="" className="md:w-[30rem]  w-96 lg:h-[24rem]  lg:rounded-md
             rounded-md 
             " />
             <div className="flex flex-col items-center lg:items-start md:px-20 lg:px-10 space-y-7 lg:space-y-3 ">
                 <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg ">About Me</h1>
                 <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 dark:text-slate-100">Front-end Developer <br /> based in Tamale, Ghana 📍 </h2>
-                <div className="space-y-6 text-zinc-600 lg:space-y-2 lg:pt-2 px-28 md:px-0">
+                <div className="space-y-6 text-zinc-600 lg:space-y-1 lg:pt-2 px-28 md:px-0">
 
-                <p className="md:text-xl text-center  lg:text-left lg:pb-3 text-sm dark:text-slate-200">
+                <p className="md:text-base text-center  lg:text-left lg:pb-3 text-sm dark:text-slate-200">
                 Hey, my name is Sophian Abdul Rahman, and I'm a Frontend Developer.  My passion lies in creating a clean optimized UI/UX  for my users.
                 
 
 
                 </p>
-                <p className="  md:text-xl text-center lg:text-left dark:text-slate-200  text-sm">
+                <p className="  md:text-base text-center lg:text-left dark:text-slate-200  text-sm">
                 My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.
                 </p>
                 <div className="text-center lg:text-left">

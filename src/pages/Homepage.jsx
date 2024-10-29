@@ -20,9 +20,9 @@ function Homepage() {
         <TechStack />
         <ServicesSection/>
         <Progress/>
-<div className="hidden">
         <AboutSection />
         {isOpenModal && <Modal />}
+<div className="hidden">
       <ProjectSection />
       <ContactSection />
       <footer>
