@@ -24,7 +24,7 @@ function AboutSection({flow}) {
                   >
 
 
-            <img src="./images/d-2.png" alt="" className="md:w-[30rem]  w-96 lg:h-[24rem]  lg:rounded-md
+            <img src="./images/d-2.png" alt="" className="md:w-[30rem]  max-w-96 lg:h-[24rem]  lg:rounded-md
             rounded-md 
             " />
             </Slide>
