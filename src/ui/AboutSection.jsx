@@ -38,7 +38,7 @@ function AboutSection({flow}) {
                 <div className="space-y-6 text-zinc-600 lg:space-y-1 lg:pt-2 px-28 md:px-0">
 
                 <p className="md:text-base text-center  lg:text-left lg:pb-3 text-sm dark:text-slate-200">
-                Hey, my name is Sophian Abdul Rahman, and I'm a Frontend Developer.  My passion lies in creating a clean optimized UI/UX  for my users.
+                Hey, my name is Damian , and I'm a Frontend Developer.  My passion lies in creating a clean optimized UI/UX  for my users.
                 
 
 
