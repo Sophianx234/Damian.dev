@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { Fade} from "react-awesome-reveal"
+import { Fade, Slide} from "react-awesome-reveal"
 import { TriggerContext, useTrigger } from "../contexts/StatesContext"
 import Modal from "./Modal"
 
-function AboutSection() {
+function AboutSection({flow}) {
     const {isOpenModal, setIsOpenModal} = useTrigger(TriggerContext)
     function mountModal(e) {
         setIsOpenModal(true)
@@ -19,11 +19,19 @@ function AboutSection() {
         flex lg:flex-row flex-col  items-center lg:justify-center 
         space-y-9 md:pt-20 md:pb-20 lg:pb-20 lg:pt-0  lg:gap-10  
         ">
+            <Slide 
+                    triggerOnce direction={ 'left'}
+                  >
 
 
             <img src="./images/d-2.png" alt="" className="md:w-[30rem]  w-96 lg:h-[24rem]  lg:rounded-md
             rounded-md 
             " />
+            </Slide>
+            <Slide 
+                    triggerOnce direction={flow ==='swap'?  'left':'right'}
+                  >
+
             <div className="flex flex-col items-center lg:items-start md:px-20 lg:px-10 space-y-7 lg:space-y-3 ">
                 <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg ">About Me</h1>
                 <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 dark:text-slate-100">Front-end Developer <br /> based in Tamale, Ghana 📍 </h2>
@@ -44,6 +52,7 @@ function AboutSection() {
                 </div>
                 </div>
             </div>
+                  </Slide>
         </div>
             </Fade>
         </section>

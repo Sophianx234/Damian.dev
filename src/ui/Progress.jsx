@@ -1,7 +1,12 @@
 import ProgressBar from "@ramonak/react-progress-bar";
+import { Slide } from "react-awesome-reveal";
 function Progress() {
     return (
         <div className="md:max-w-2xl mx-auto pb-32 overflow-hidden  ">
+            <Slide 
+                    triggerOnce direction={'right'}
+                  >
+
             <h1 className="text-center text-xl text-slate-700 font-semibold dark:text-white">Progress</h1>
             <div className="space-y-3 px-14 py-4 pb-7 mt-5 rounded-lg shadow-md mx-9 md:mx-0 bg-[#F9F9F9]">
 
@@ -55,6 +60,7 @@ function Progress() {
                 />
             </div>
                 </div>
+                </Slide>
         </div>
     )
 }
