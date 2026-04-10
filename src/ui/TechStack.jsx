@@ -8,17 +8,24 @@ import {
   Database,
   Code2,
   GitMerge,
-  Terminal
+  Terminal,
+  Atom,
+  Triangle,
+  Braces
 } from "lucide-react";
 
 // Updated to reflect an Enterprise, DevOps, and Mobile architecture
 const techItems = [
+  { name: "Next.js", role: "React Framework", Icon: Triangle },
+  { name: "React", role: "Core UI Library", Icon: Atom },
+  { name: "TypeScript", role: "Type Safety", Icon: Braces },
+  { name: "Node.js", role: "Backend Runtime", Icon: Server },
   { name: "React Native", role: "Mobile Architecture", Icon: Smartphone },
   { name: ".NET Core", role: "Enterprise Backend", Icon: Server },
   { name: "Docker", role: "Containerization", Icon: Box },
   { name: "Kubernetes", role: "Orchestration", Icon: Network },
   { name: "C#", role: "Primary Language", Icon: Code2 },
-  { name: "SQL Server", role: "Relational Database", Icon: Database },
+  { name: "PostgreSQL", role: "Relational Database", Icon: Database },
   { name: "CI/CD", role: "Deployment Pipeline", Icon: Terminal },
   { name: "Git Workflow", role: "Version Control", Icon: GitMerge },
 ];

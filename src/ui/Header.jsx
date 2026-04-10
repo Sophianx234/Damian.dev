@@ -58,7 +58,7 @@ function Header() {
             "
           >
             {isDark ? (
-              <GoSun size={24} className="text-yellow-400" />
+              <GoSun size={24} className="text-white" />
             ) : (
               <WiMoonAltWaxingCrescent4 size={27} className="text-gray-700" />
             )}

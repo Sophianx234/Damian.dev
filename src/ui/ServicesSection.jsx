@@ -1,37 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { 
-  Monitor, 
-  Settings2, 
-  Bug, 
+  MonitorSmartphone, 
+  Server, 
+  Box, // Imported Box to represent Docker/Containers
   Database, 
   ArrowUpRight 
 } from "lucide-react";
 
+// Updated to match your Next.js, Node, and DevOps ecosystem
 const services = [
   {
-    title: "Front-end Development",
-    description: "Building responsive, pixel-perfect user interfaces with a focus on motion and micro-interactions.",
-    tags: ["React", "Tailwind", "Framer Motion"],
-    Icon: Monitor,
+    id: "01",
+    title: "Front-end Architecture",
+    description: "Building highly responsive, SEO-optimized user interfaces with a strict focus on performance, accessibility, and fluid micro-interactions.",
+    tags: ["Next.js", "React", "Tailwind CSS"],
+    Icon: MonitorSmartphone,
   },
   {
-    title: "Back-end Architecture",
-    description: "Designing robust server-side logic, API integrations, and scalable microservices.",
-    tags: ["Node.js", "Express", "GraphQL"],
-    Icon: Settings2,
+    id: "02",
+    title: "Back-end Engineering",
+    description: "Designing robust server-side logic, secure REST APIs, and scalable microservices that drive complex business operations.",
+    tags: ["ASP.NET", "Node.js", "Express", "TypeScript"],
+    Icon: Server,
   },
   {
-    title: "Testing & Debugging",
-    description: "Ensuring application stability through rigorous performance profiling and automated testing.",
-    tags: ["Jest", "Cypress", "Performance"],
-    Icon: Bug,
-  },
-  {
+    id: "03",
     title: "Database Management",
-    description: "Architecting efficient data schemas and managing high-availability storage solutions.",
-    tags: ["PostgreSQL", "MongoDB", "Supabase"],
+    description: "Architecting efficient relational and NoSQL data schemas, optimizing queries, and managing high-availability storage solutions.",
+    tags: ["MongoDB", "PostgreSQL", "Redis"],
     Icon: Database,
+  },
+  {
+    id: "04",
+    title: "Cloud & DevOps",
+    description: "Containerizing applications for consistent deployment and orchestrating scalable infrastructure to ensure zero-downtime and high availability.",
+    tags: ["Docker", "Kubernetes", "CI/CD"],
+    Icon: Box, // Replaced the Bug icon
   },
 ];
 
@@ -40,75 +45,74 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 15
+      duration: 0.6,
+      ease: "easeOut"
     }
   },
 };
 
 function ServicesSection() {
   return (
-    <section className="min-h-screen w-full bg-neutral-50 dark:bg-[#0a0a0a] text-slate-900 dark:text-neutral-100 py-24 px-6 relative overflow-hidden">
-      
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section 
+      id="section-services"
+      className="w-full bg-[#F9F9F9] dark:bg-[#111111] text-zinc-900 dark:text-white py-24 md:py-32 px-6 transition-colors duration-500"
+    >
+      <div className="max-w-6xl mx-auto">
         
         {/* Header */}
-        <div className="flex flex-col items-center justify-center text-center mb-20 space-y-6">
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-200/50 dark:bg-neutral-800/50 text-xs font-medium uppercase tracking-wider text-neutral-600 dark:text-neutral-400"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-            What I Do
-          </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white max-w-2xl"
-          >
-            Crafting digital <br />
-            <span className="text-neutral-400 dark:text-neutral-600">experiences that matter.</span>
-          </motion.h1>
-
+        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl font-bold tracking-tighter mb-4"
+            >
+              Services.
+            </motion.h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
+              viewport={{ once: true }}
+              className="w-24 h-1 bg-zinc-900 dark:bg-white origin-left"
+            />
+          </div>
+          
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-neutral-600 dark:text-neutral-400 max-w-xl text-lg leading-relaxed"
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-sm md:text-right"
           >
-            From conceptualization to deployment, I deliver comprehensive web solutions tailored to your unique goals, focusing on performance, aesthetics, and usability.
+            Delivering comprehensive, end-to-end web solutions tailored to scale your business logic and engage your users.
           </motion.p>
         </div>
 
-        {/* Services Grid */}
+        {/* 1px Grid Layout: 
+          The parent has a dark background and a 1px gap. 
+          The children have their own backgrounds. 
+          This creates a perfect, razor-thin grid line between items.
+        */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-zinc-200 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800"
         >
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
@@ -120,47 +124,50 @@ function ServicesSection() {
   );
 }
 
-function ServiceCard({ title, description, tags, Icon }) {
+function ServiceCard({ id, title, description, tags, Icon }) {
   return (
     <motion.div 
       variants={cardVariants}
-      className="group relative p-8 md:p-10 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 overflow-hidden hover:shadow-2xl hover:shadow-neutral-200/50 dark:hover:shadow-black/50 transition-all duration-500"
+      className="group relative p-8 md:p-12 bg-white dark:bg-[#111111] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors duration-500 overflow-hidden flex flex-col h-full"
     >
-      <div className="relative z-10 flex flex-col h-full justify-between gap-8">
-        
-        {/* Top Row: Icon & Action */}
-        <div className="flex items-start justify-between">
-          <div className="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-2xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
-            <Icon size={28} strokeWidth={1.5} />
-          </div>
-          <ArrowUpRight className="text-neutral-300 group-hover:text-neutral-900 dark:text-neutral-700 dark:group-hover:text-white transition-colors duration-300" />
-        </div>
-
-        {/* Content */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-3 text-neutral-900 dark:text-white group-hover:translate-x-1 transition-transform duration-300">
-            {title}
-          </h3>
-          <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6">
-            {description}
-          </p>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span 
-                key={tag} 
-                className="text-xs font-medium px-2.5 py-1 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 border border-transparent group-hover:border-neutral-200 dark:group-hover:border-neutral-700 transition-colors"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+      
+      {/* Top Row: ID & Icon */}
+      <div className="flex items-start justify-between mb-12">
+        <span className="text-sm font-mono tracking-widest text-zinc-400 dark:text-zinc-600 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors duration-300">
+          {id}
+        </span>
+        <div className="text-zinc-900 dark:text-white">
+          <Icon className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1} />
         </div>
       </div>
 
-      {/* Hover Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent dark:from-blue-900/10 dark:via-transparent dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      {/* Main Content */}
+      <div className="flex-grow">
+        <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
+          {title}
+        </h3>
+        <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
+          {description}
+        </p>
+      </div>
+
+      {/* Bottom Row: Tags & Arrow */}
+      <div className="flex items-end justify-between mt-auto pt-8 border-t border-zinc-100 dark:border-zinc-800/50">
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span 
+              key={tag} 
+              className="text-xs font-mono uppercase tracking-widest px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <ArrowUpRight className="w-6 h-6 text-zinc-300 dark:text-zinc-700 group-hover:text-zinc-900 dark:group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0 ml-4" />
+      </div>
+
+      {/* Left accent border that expands on hover */}
+      <div className="absolute top-0 left-0 w-1 h-full bg-zinc-900 dark:bg-white scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out" />
     </motion.div>
   );
 }
