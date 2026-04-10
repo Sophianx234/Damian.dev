@@ -1,71 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { 
-  Atom, 
-  Braces, 
-  Code2, 
-  FileCode, 
-  Layers, 
+  Smartphone, 
   Server, 
-  Triangle, 
-  Wind 
+  Box, 
+  Network,
+  Database,
+  Code2,
+  GitMerge,
+  Terminal
 } from "lucide-react";
 
+// Updated to reflect an Enterprise, DevOps, and Mobile architecture
 const techItems = [
-  { name: "HTML5", Icon: FileCode },
-  { name: "CSS3", Icon: Layers },
-  { name: "JavaScript", Icon: Code2 },
-  { name: "TypeScript", Icon: Braces },
-  { name: "React", Icon: Atom },
-  { name: "Next.js", Icon: Triangle }, // Represents Vercel/Next.js architecture
-  { name: "Tailwind", Icon: Wind },
-  { name: "Node.js", Icon: Server },
+  { name: "React Native", role: "Mobile Architecture", Icon: Smartphone },
+  { name: ".NET Core", role: "Enterprise Backend", Icon: Server },
+  { name: "Docker", role: "Containerization", Icon: Box },
+  { name: "Kubernetes", role: "Orchestration", Icon: Network },
+  { name: "C#", role: "Primary Language", Icon: Code2 },
+  { name: "SQL Server", role: "Relational Database", Icon: Database },
+  { name: "CI/CD", role: "Deployment Pipeline", Icon: Terminal },
+  { name: "Git Workflow", role: "Version Control", Icon: GitMerge },
 ];
 
 function TechStack() {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-white text-black dark:bg-black dark:text-white py-24 relative overflow-hidden transition-colors duration-500">
-      
-      {/* Abstract Artistic Background Elements - Monochrome */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-         <div className="absolute top-0 left-0 w-[50vw] h-[50vw] bg-black dark:bg-white rounded-full blur-[100px] translate-x-[-20%] translate-y-[-20%]" />
-         <div className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-black dark:bg-white rounded-full blur-[120px] translate-x-[20%] translate-y-[20%]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 z-10 w-full">
+    <section className="min-h-screen w-full flex items-center justify-center bg-[#F9F9F9] text-zinc-900 dark:bg-[#111111] dark:text-white py-24 md:py-32 px-6 transition-colors duration-500">
+      <div className="max-w-6xl mx-auto w-full z-10">
+        
         {/* Header Section */}
-        <div className="flex flex-col items-center mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bold tracking-tighter text-center mb-6"
-          >
-            THE STACK
-          </motion.h2>
-          
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
-            viewport={{ once: true }}
-            className="w-24 h-1 bg-black dark:bg-white"
-          />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
+          <div className="space-y-4">
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-5xl md:text-7xl font-bold tracking-tighter"
+            >
+              The Arsenal.
+            </motion.h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
+              viewport={{ once: true }}
+              className="w-24 h-1 bg-zinc-900 dark:bg-white origin-left"
+            />
+          </div>
           
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-6 text-sm font-mono tracking-widest uppercase opacity-60"
+            className="text-base md:text-lg font-medium text-zinc-500 dark:text-zinc-400 max-w-sm md:text-right"
           >
-            Engineering • Design • Performance
+            Engineering scalable enterprise backends, containerized infrastructure, and seamless cross-platform mobile experiences.
           </motion.p>
         </div>
 
-        {/* Grid Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        {/* Minimalist Grid Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {techItems.map((item, index) => (
             <TechCard key={item.name} item={item} index={index} />
           ))}
@@ -76,39 +72,45 @@ function TechStack() {
 }
 
 function TechCard({ item, index }) {
-  const { name, Icon } = item;
+  const { name, role, Icon } = item;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ 
-        duration: 0.6, 
-        delay: index * 0.1,
+        duration: 0.5, 
+        delay: index * 0.05, // Staggered reveal
         ease: "easeOut"
       }}
       viewport={{ once: true }}
-      className="group relative flex flex-col items-center justify-center p-8 md:p-12 border border-neutral-200 dark:border-neutral-800 bg-transparent hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-500 cursor-crosshair overflow-hidden"
+      className="group relative flex flex-col justify-between p-6 md:p-8 h-48 md:h-56 bg-white dark:bg-[#1A1A1A] border border-zinc-200 dark:border-zinc-800 hover:border-zinc-900 dark:hover:border-white transition-all duration-300 overflow-hidden"
     >
-        {/* Hover overlay effect (optional layered depth) */}
-        <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out -z-10" />
+      {/* Background Icon that scales up on hover */}
+      <div className="absolute -bottom-6 -right-6 text-zinc-100 dark:text-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors duration-500 z-0">
+        <Icon 
+          className="w-32 h-32 md:w-40 md:h-40 opacity-50 group-hover:opacity-10 dark:opacity-50 dark:group-hover:opacity-10 transform group-hover:scale-110 transition-transform duration-700 ease-out" 
+          strokeWidth={1} 
+        />
+      </div>
 
-        <motion.div
-            whileHover={{ rotate: 360, scale: 1.1 }}
-            transition={{ duration: 0.6, ease: "backOut" }}
-            className="mb-6 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center"
-        >
-            {/* Lucide icons are stroke-based, so we control strokeWidth and remove fill-current */}
-            <Icon className="w-full h-full" strokeWidth={1.5} />
-        </motion.div>
+      {/* Top Section: Small Icon */}
+      <div className="z-10 text-zinc-900 dark:text-white">
+        <Icon className="w-8 h-8" strokeWidth={1.5} />
+      </div>
 
-        <span className="text-lg font-medium tracking-tight font-mono">
-            {name}
+      {/* Bottom Section: Text */}
+      <div className="z-10 mt-auto">
+        <p className="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 mb-1 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+          {role}
+        </p>
+        <span className="text-xl md:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          {name}
         </span>
-        
-        {/* Artistic Corner Accents on Hover */}
-        <span className="absolute top-2 left-2 w-2 h-2 border-t border-l border-current opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <span className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-current opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
+      
+      {/* Subtle top border highlight on hover */}
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-zinc-900 dark:bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-20" />
     </motion.div>
   );
 }

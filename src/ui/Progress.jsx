@@ -1,202 +1,160 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Zap, Activity, Code, Layout, TrendingUp, Wind, Target } from "lucide-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Layout, Smartphone, Server, Box, Database, Plus, Minus } from "lucide-react";
 
-const skillsData = [
-  { 
-    name: "HTML5 & Semantic Markup", 
-    level: 95, 
-    Icon: Layout, 
-    secondaryMetric: "15+ Projects",
-    color: "from-orange-400 to-amber-500"
+// Updated to include your full-stack web capabilities alongside enterprise & mobile
+const capabilitiesData = [
+  {
+    id: "01",
+    title: "Modern Web Applications",
+    icon: Layout,
+    tech: "Next.js • Node.js • TypeScript • Tailwind",
+    description: "Building fast, SEO-optimized, and highly responsive web applications. Leveraging server-side rendering, type-safe logic, and utility-first styling for premium user experiences."
   },
-  { 
-    name: "CSS3 & Tailwind Mastery", 
-    level: 90, 
-    Icon: Wind, 
-    secondaryMetric: "Advanced Custom Styling",
-    color: "from-cyan-400 to-blue-500"
+  {
+    id: "02",
+    title: "Cross-Platform Mobile",
+    icon: Smartphone,
+    tech: "React Native • Expo • TypeScript",
+    description: "Architecting fluid, native-feeling mobile applications for iOS and Android. Focused on high performance, complex state management, and seamless native module integration."
   },
-  { 
-    name: "JavaScript (ES6+) & Logic", 
-    level: 88, 
-    Icon: Code, 
-    secondaryMetric: "Complex Algorithm Design",
-    color: "from-yellow-400 to-yellow-600"
+  {
+    id: "03",
+    title: "Enterprise Backends",
+    icon: Server,
+    tech: ".NET Core • C# • REST APIs",
+    description: "Designing robust, highly scalable server-side architectures. Building secure APIs and microservices tailored for banking operations, investment platforms, and large-scale data processing."
   },
-  { 
-    name: "React & Modern Ecosystem", 
-    level: 92, 
-    Icon: Activity, 
-    secondaryMetric: "State Management (Context/Zustand)",
-    color: "from-sky-400 to-indigo-600"
+  {
+    id: "04",
+    title: "Cloud & DevOps",
+    icon: Box,
+    tech: "Docker • Kubernetes • CI/CD",
+    description: "Containerizing applications for consistent deployment across environments. Orchestrating scalable infrastructure to ensure zero-downtime deployments and high availability."
   },
-  { 
-    name: "Node.js & Backend Logic", 
-    level: 85, 
-    Icon: Zap, 
-    secondaryMetric: "API/Microservice Development",
-    color: "from-green-400 to-lime-500"
-  },
+  {
+    id: "05",
+    title: "Data Architecture",
+    icon: Database,
+    tech: "SQL Server • MongoDB • Redis",
+    description: "Structuring complex relational and NoSQL databases. Optimizing queries, managing state, and ensuring data integrity for high-stakes business logic and user platforms."
+  }
 ];
 
-// Animation variants for staggered appearance
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.2,
-    },
-  },
-};
+function CapabilitiesSection() {
+  const [openId, setOpenId] = useState("01");
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 15
-    }
-  },
-};
-
-const barVariants = {
-  hidden: { width: "0%" },
-  visible: (level) => ({
-    width: `${level}%`,
-    transition: {
-      duration: 1.8,
-      ease: [0.25, 1, 0.5, 1], // Custom cubic-bezier for smooth finish
-    },
-  }),
-};
-
-function ProgressSection() {
   return (
-    // Updated: Base background is white, dark mode background is dark
-    <section className="w-full bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200 py-24 px-6 relative overflow-hidden">
-      
-      {/* Background radial gradient for professional depth */}
-      {/* Updated: Subtle light mode gradient, distinct dark mode gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-color-neutral-100)_0%,_transparent_50%)] opacity-50 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-color-neutral-800)_0%,_transparent_50%)] dark:opacity-30" />
-      
-      <div className="max-w-4xl mx-auto relative z-10">
+    <section className="bg-white text-zinc-900 dark:bg-[#111111] dark:text-white py-24 md:py-32 px-6 transition-colors duration-500">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
         
-        {/* Header */}
-        <div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            // Updated: Light mode colors for the badge
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-100 text-xs font-semibold uppercase tracking-widest text-blue-600 border border-neutral-300 dark:bg-neutral-800 dark:text-blue-400 dark:border-neutral-700/50"
-          >
-            <Target size={14} className="text-blue-500" strokeWidth={2.5} />
-            Mastery & Expertise
-          </motion.div>
-
-          <motion.h1 
+        {/* LEFT SIDE: Sticky Header */}
+        <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            // Updated: Light mode text color
-            className="text-4xl md:text-5xl font-extrabold tracking-tighter text-neutral-900 dark:text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
           >
-            Deep Dive: Technical Proficiency
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            Capabilities.
+          </motion.h2>
+          
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            // Updated: Light mode text color
-            className="text-neutral-600 dark:text-neutral-400 max-w-lg text-lg leading-relaxed font-light"
+            className="w-24 h-1 bg-zinc-900 dark:bg-white origin-left mt-6"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mt-8 text-lg font-medium text-zinc-500 dark:text-zinc-400 leading-relaxed"
           >
-            A metric-driven overview of my core competencies, reflecting both learned knowledge and real-world application experience.
+            I architect end-to-end solutions—from scalable enterprise backends and containerized infrastructure to high-performance web and mobile interfaces.
           </motion.p>
         </div>
 
-        {/* Progress Grid/List */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          className="space-y-4"
-        >
-          {skillsData.map((skill, index) => (
-            <SkillBar key={index} {...skill} />
+        {/* RIGHT SIDE: Interactive Accordion */}
+        <div className="lg:w-2/3 border-t border-zinc-200 dark:border-zinc-800">
+          {capabilitiesData.map((item, index) => (
+            <AccordionItem 
+              key={item.id} 
+              item={item} 
+              isOpen={openId === item.id} 
+              onClick={() => setOpenId(openId === item.id ? null : item.id)}
+              index={index}
+            />
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>
   );
 }
 
-function SkillBar({ name, level, Icon, secondaryMetric, color }) {
-  // Extracting the tailwind color utility suffix (e.g., 'amber', 'blue') for dynamic styling
-  const colorSuffix = color.split('-').slice(-1)[0];
+function AccordionItem({ item, isOpen, onClick, index }) {
+  const { id, title, icon: Icon, tech, description } = item;
 
   return (
     <motion.div 
-      // Updated: Light mode background and border. Shadow is subtle in light mode, pronounced in dark.
-      className="p-4 md:p-6 rounded-2xl bg-white border border-neutral-200 shadow-lg dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-2xl hover:shadow-xl dark:hover:border-neutral-700/80 transition-all duration-500 cursor-default relative overflow-hidden group"
-      variants={itemVariants} 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="border-b border-zinc-200 dark:border-zinc-800"
     >
-      {/* Subtle border glow on hover */}
-      {/* Updated: Light mode hover color is deeper, dark mode is lighter */}
-      <div className={`absolute inset-0 border-2 border-transparent transition-all duration-500 rounded-2xl group-hover:border-b-4 group-hover:border-b-${colorSuffix}-600 dark:group-hover:border-b-${colorSuffix}-500`} />
-
-      <div className="flex flex-col gap-3">
-        {/* Skill Header */}
-        <div className="flex justify-between items-start">
-          <div className="flex items-center gap-4">
-            {/* Updated: Light mode icon container bg and icon text color */}
-            <div className="p-2 bg-neutral-100 dark:bg-neutral-800 rounded-xl">
-              <Icon size={24} className={`text-${colorSuffix}-600 dark:text-${colorSuffix}-400`} strokeWidth={1.8} />
-            </div>
-            {/* Updated: Light mode title text color */}
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-white">
-              {name}
-            </h3>
-          </div>
-          {/* Updated: Light mode level text color */}
-          <span className="text-2xl font-extrabold text-neutral-900 dark:text-white">
-            {level}<span className="text-base text-neutral-500 dark:text-neutral-400 font-medium">%</span>
+      <button 
+        onClick={onClick}
+        className="w-full py-8 flex items-center justify-between group focus:outline-none"
+      >
+        <div className="flex items-center gap-6 md:gap-8 text-left">
+          <span className="text-sm md:text-base font-mono text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+            {id}
           </span>
+          <h3 className={`text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-300 ${isOpen ? "text-zinc-900 dark:text-white" : "text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"}`}>
+            {title}
+          </h3>
         </div>
+        
+        {/* Toggle Icon */}
+        <div className="text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors ml-4 shrink-0">
+          {isOpen ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
+        </div>
+      </button>
 
-        {/* Custom Progress Bar Implementation */}
-        <div className="relative w-full h-2 bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden mt-2">
+      {/* Expandable Content */}
+      <AnimatePresence>
+        {isOpen && (
           <motion.div
-            custom={level}
-            variants={barVariants}
-            className={`h-full bg-gradient-to-r ${color} shadow-lg rounded-full`}
-            style={{
-                // Ensure the animation target style is set
-                width: '0%', 
-            }}
-          />
-        </div>
-
-        {/* Secondary Detail Metric */}
-        <div className="text-right mt-1">
-          {/* Updated: Light mode secondary text color */}
-          <p className="text-xs font-mono tracking-wider uppercase text-neutral-400 dark:text-neutral-500">
-            {secondaryMetric}
-          </p>
-        </div>
-      </div>
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="pb-8 pl-12 md:pl-16 pr-4 flex flex-col md:flex-row gap-6 md:gap-12 text-zinc-500 dark:text-zinc-400">
+              <div className="shrink-0">
+                <Icon className="w-10 h-10 text-zinc-900 dark:text-white" strokeWidth={1.5} />
+              </div>
+              <div>
+                <p className="text-sm font-mono uppercase tracking-widest text-zinc-900 dark:text-white mb-3">
+                  {tech}
+                </p>
+                <p className="text-base md:text-lg leading-relaxed max-w-xl">
+                  {description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
 
-export default ProgressSection;
+export default CapabilitiesSection;

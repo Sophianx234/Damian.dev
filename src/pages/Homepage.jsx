@@ -1,6 +1,7 @@
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
 import AboutSection from "../ui/aboutSection";
 import ContactSection from "../ui/ContactSection";
+import Experience from "../ui/Experience";
 import Footer from "../ui/Footer";
 import Hero from "../ui/Hero";
 import Modal from "../ui/Modal";
@@ -18,6 +19,7 @@ function Homepage() {
 
       <div id="section-about" className=" relative dark:bg-[#021526]">
         <TechStack />
+        <Experience/>
         <ServicesSection/>
         <Progress/>
         <AboutSection />

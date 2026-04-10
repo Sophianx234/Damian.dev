@@ -1,66 +1,187 @@
-import Portfolio from "./Portfolio";
-import { Slide } from "react-awesome-reveal";
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Github } from "lucide-react";
+
+// Your actual projects injected into the new data structure
+const projectsData = [
+  {
+    id: "01",
+    name: "Dasaug",
+    category: "Community Platform",
+    description: "A dedicated platform built for the Dagbon Students Association, University of Ghana Chapter. It serves as a central hub for students to stay connected, access important information, explore cultural activities, and engage with the community.",
+    tech: ["React", "Tailwind CSS", "Node.js"], // You can adjust these
+    liveLink: "https://dasaug.vercel.app/",
+    githubLink: "https://github.com/Sophianx234/dasa-web",
+    image: "./images/p-1.png" 
+  },
+  {
+    id: "02",
+    name: "ACFITC",
+    category: "Nonprofit Foundation",
+    description: "A platform built for a nonprofit foundation dedicated to empowering underserved communities. It highlights the foundation’s mission, ongoing projects, impact stories, and ways people can get involved to drive social change.",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"], // You can adjust these
+    liveLink: "https://acfitc.vercel.app/",
+    githubLink: "https://github.com/Sophianx234/acfitc",
+    image: "./images/p-2.png"
+  },
+  {
+    id: "03",
+    name: "Wunkat Estate",
+    category: "Real Estate & PropTech",
+    description: "A clean and modern real estate platform designed to showcase premium properties with clarity and style. Provides users with an easy way to explore listings, view property details, and experience a smooth, professional navigation experience.",
+    tech: ["React", "Tailwind CSS", "Express"], // You can adjust these
+    liveLink: "https://wunkathomes.vercel.app/",
+    githubLink: "https://github.com/Sophianx234/wunkat-estate",
+    image: "./images/p-3.png"
+  },
+  {
+    id: "04",
+    name: "Rammys Closet",
+    category: "E-Commerce",
+    description: "A sleek and user-friendly cosmetics website that allows users to explore, select, and order a wide range of beauty products. Features curated collections, detailed product information, and a smooth shopping experience.",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB"], // You can adjust these
+    liveLink: "https://rammys-closet.vercel.app/",
+    githubLink: "https://github.com/Sophianx234/rammys-closet",
+    image: "./images/p-4.png"
+  }
+];
 
 function ProjectSection() {
   return (
-    <section
-      id="section-projects"
-      className="bg-[#F9F9F9] dark:bg-[#272F38]
-        
-        "
+    <section 
+      id="section-projects" 
+      className="bg-[#F9F9F9] text-zinc-900 dark:bg-[#272F38] dark:text-white py-24 md:py-32 px-6 transition-colors duration-500"
     >
-      <div
-        className="lg:max-w-6xl lg:mx-auto md:pt-24 pt-10 pb-20 lg:pt-20  
-        "
-      >
-        <Slide triggerOnce>
-          <h1 className="text-secondary-purple uppercase font-bold font-[Montserrat]  md:text-lg text-center lg:text-left">
-            Portfolio
-          </h1>
-          <h2 className="md:text-3xl font-semibold  text-center lg:text-left  text-slate-700 md:px-10 lg:px-0 text-2xl dark:text-slate-100">
-            Each project is a unique piece of development 🧩
-          </h2>
-        </Slide>
-
-        <div className="space-y-40  pt-20 ">
-          <Portfolio 
-  name="Dasaug"
-  liveLink="https://dasaug.vercel.app/"
-  desc="DASAUG is a dedicated platform built for the Dagbon Students Association, University of Ghana Chapter. It serves as a central hub for students to stay connected, access important information, explore cultural activities, and engage with the community. The platform is designed to strengthen unity, preserve tradition, and support the academic and social growth of Dagbon students on campus."
-  emoji="🍿"
-  codeLink="https://github.com/Sophianx234/dasa-web"
-  imageNum={1}
-/>
-
-          <Portfolio   
-  name="ACFITC"
-  liveLink="https://acfitc.vercel.app/"
-  desc="ACFITC is a platform built for a nonprofit foundation dedicated to empowering underserved communities. It highlights the foundation’s mission, ongoing projects, impact stories, and ways people can get involved. The site serves as a central space for raising awareness, connecting supporters, and driving meaningful social change."
-  emoji="🌍"
-  codeLink="https://github.com/Sophianx234/acfitc"
-  imageNum={2}
-/>
-         <Portfolio  
-  name="Wunkat Estate"
-  liveLink="https://wunkathomes.vercel.app/"
-  desc="Wunkat Estate is a clean and modern real estate platform designed to showcase premium properties with clarity and style. It provides users with an easy way to explore listings, view property details, and get a feel for available homes and apartments. The platform focuses on simplicity, smooth navigation, and a professional look—perfect for anyone searching for a future home or investment opportunity."
-  emoji="🏡"
-  codeLink="https://github.com/Sophianx234/wunkat-estate"
-  imageNum={3}
-/>
-
-          <Portfolio   
-  name="Rammys Closet"
-  liveLink="https://rammys-closet.vercel.app/"
-  desc="Rammys Closet is a sleek and user-friendly cosmetics website that allows users to explore, select, and order a wide range of beauty products. The platform features curated collections, detailed product information, and a smooth shopping experience, making it easy for customers to discover and purchase their favorite cosmetics online."
-  emoji="👗"
-  codeLink="https://github.com/Sophianx234/rammys-closet"
-  imageNum={4}
-/>
-
+      <div className="max-w-6xl mx-auto w-full">
+        
+        {/* Header */}
+        <div className="mb-16 md:mb-24">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-bold tracking-tighter mb-4"
+          >
+            Selected Works.
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+            className="w-24 h-1 bg-zinc-900 dark:bg-white origin-left"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-6 text-lg font-medium text-slate-600 dark:text-gray-300"
+          >
+            Each project is a unique piece of development architecture.
+          </motion.p>
         </div>
+
+        {/* Project List */}
+        <div className="space-y-24 md:space-y-40">
+          {projectsData.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </div>
+
       </div>
     </section>
+  );
+}
+
+function ProjectCard({ project, index }) {
+  // Alternates the layout left/right based on the array index
+  const isEven = index % 2 === 0;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      viewport={{ once: true, margin: "-100px" }}
+      className={`flex flex-col gap-8 md:gap-16 ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} items-center`}
+    >
+      
+      {/* Image Container */}
+      <div className="w-full lg:w-3/5 group relative overflow-hidden bg-zinc-200 dark:bg-zinc-800 aspect-[4/3] sm:aspect-video lg:aspect-[4/3] shadow-lg dark:shadow-2xl">
+        <img 
+          src={project.image} 
+          alt={`Screenshot of ${project.name}`}
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-in-out"
+        />
+        
+        {/* Subtle overlay on hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
+      </div>
+
+      {/* Content Container */}
+      <div className="w-full lg:w-2/5 flex flex-col justify-center">
+        
+        {/* Number & Category */}
+        <div className="flex items-center gap-4 mb-4">
+          <span className="text-sm font-mono text-slate-500 dark:text-gray-400">
+            {project.id}
+          </span>
+          <span className="h-[1px] w-12 bg-slate-300 dark:bg-gray-600" />
+          <span className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-gray-400">
+            {project.category}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-zinc-900 dark:text-white">
+          {project.name}
+        </h3>
+
+        {/* Description */}
+        <p className="text-base md:text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-8">
+          {project.description}
+        </p>
+
+        {/* Tech Stack List */}
+        <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 border-l-2 border-slate-200 dark:border-gray-700 pl-4">
+          {project.tech.map((t) => (
+            <span key={t} className="text-sm font-medium text-zinc-800 dark:text-gray-200">
+              {t}
+            </span>
+          ))}
+        </div>
+
+        {/* Action Links */}
+        <div className="flex flex-wrap items-center gap-8">
+          {project.liveLink && project.liveLink !== "#" && (
+            <a 
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:opacity-70 transition-opacity"
+            >
+              Live Demo
+              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+          )}
+          
+          {project.githubLink && project.githubLink !== "#" && (
+            <a 
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              Source Code
+              <Github className="w-5 h-5" />
+            </a>
+          )}
+        </div>
+
+      </div>
+    </motion.div>
   );
 }
 
