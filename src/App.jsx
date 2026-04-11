@@ -8,8 +8,7 @@ function App() {
    <BrowserRouter>
    <Routes>
     <Route element={<AppLayout/>}>
-    <Route path="/" element={<Navigate replace to='/home'/>}/>
-    <Route path="/home" element={<Homepage/>}/>
+    <Route path="/" element={<Homepage/>}/>
    
 
     </Route>
