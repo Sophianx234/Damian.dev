@@ -1,41 +1,36 @@
-import { HiBars3 } from "react-icons/hi2";
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sun, Moon, Menu, X } from "lucide-react"; // Swapped to match the rest of the site
 import NavLinks from "./NavLinks";
 import { TriggerContext, useTrigger } from "../contexts/StatesContext";
-import { WiMoonAltWaxingCrescent4 } from "react-icons/wi";
-import { GoSun } from "react-icons/go";
-import { motion } from "framer-motion";
 
 function Header() {
   const { isOpen, setIsOpen, isDark, setIsDark } = useTrigger(TriggerContext);
 
   return (
     <header className={`${isDark ? "dark" : ""} w-full fixed top-0 z-50`}>
-      {/* Floating Artistic Header */}
+      
+      {/* Main Nav Bar 
+        Removed the soft shadows and replaced them with a sharp bottom border 
+        and a clean frosted glass effect.
+      */}
       <motion.nav
-        initial={{ opacity: 0, y: -25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, ease: "easeOut" }}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="
           flex items-center justify-between
-          px-6 md:px-12 py-4 
-          
-           shadow-md
-
-          backdrop-blur-2xl bg-white/40 dark:bg-[#1e2530]/40
-          border border-white/20 dark:border-white/10
-          ring-1 ring-black/5 dark:ring-white/5
+          px-6 md:px-12 py-5 
+          bg-white/80 dark:bg-[#111111]/80 backdrop-blur-md
+          border-b border-zinc-200 dark:border-zinc-800
+          transition-colors duration-500
         "
       >
-        {/* LOGO — Artistic Gradient Text */}
+        {/* LOGO */}
         <motion.h1
-          whileHover={{ scale: 1.03 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          className="
-            text-2xl md:text-3xl font-extrabold 
-            tracking-tight dark:text-white cursor-pointer select-none
-             
-            
-          "
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white cursor-pointer select-none"
         >
           Damian.dev
         </motion.h1>
@@ -45,79 +40,61 @@ function Header() {
           <NavLinks classy />
         </div>
 
-        {/* Desktop Controls */}
+        {/* Desktop Controls (Theme Toggle) */}
         <div className="hidden lg:flex items-center gap-4">
-          <motion.button
-            whileTap={{ scale: 0.85 }}
+          <button
             onClick={() => setIsDark((prev) => !prev)}
-            className="
-              p-3 rounded-full 
-              backdrop-blur-xl bg-white/30 dark:bg-white/10
-              hover:bg-white/50 dark:hover:bg-white/20
-              transition-all shadow-sm
-            "
+            className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors focus:outline-none"
+            aria-label="Toggle Dark Mode"
           >
-            {isDark ? (
-              <GoSun size={24} className="text-white" />
-            ) : (
-              <WiMoonAltWaxingCrescent4 size={27} className="text-gray-700" />
-            )}
-          </motion.button>
+            {isDark ? <Sun size={24} /> : <Moon size={24} />}
+          </button>
         </div>
 
-        {/* Mobile Controls */}
-        <div className="flex lg:hidden items-center gap-3">
-          {/* Dark/Light Toggle */}
-          <motion.button
-            whileTap={{ scale: 0.85 }}
+        {/* Mobile Controls (Theme Toggle & Menu) */}
+        <div className="flex lg:hidden items-center gap-4">
+          
+          {/* Mobile Dark/Light Toggle */}
+          <button
             onClick={() => setIsDark((prev) => !prev)}
-            className="
-              p-3 rounded-full 
-              backdrop-blur-xl bg-white/40 dark:bg-white/10
-              hover:bg-white/60 dark:hover:bg-white/20
-              transition-all shadow-lg
-            "
+            className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors focus:outline-none"
           >
-            {isDark ? (
-              <GoSun size={26} className="text-yellow-400" />
-            ) : (
-              <WiMoonAltWaxingCrescent4 size={28} className="text-gray-700" />
-            )}
-          </motion.button>
+            {isDark ? <Sun size={24} /> : <Moon size={24} />}
+          </button>
 
-          {/* Mobile Menu Toggle */}
-          <motion.button
-            whileTap={{ scale: 0.85 }}
+          {/* Mobile Menu Toggle (Switches to an X when open) */}
+          <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="
-              p-3 rounded-full 
-              backdrop-blur-xl bg-white/40 dark:bg-white/10
-              hover:bg-white/60 dark:hover:bg-white/20
-              transition-all shadow-lg
-            "
+            className="p-2 text-zinc-900 dark:text-white transition-colors focus:outline-none"
           >
-            <HiBars3 size={28} className="dark:fill-white" />
-          </motion.button>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.35 }}
-          className="
-            lg:hidden mt-4 
-            bg-white/70 dark:bg-[#1e2530]/70
-            backdrop-blur-xl 
-            rounded-xl mx-6 shadow-xl border border-white/20
-          "
-        >
-          <NavLinks type="dropdown" classy />
-        </motion.div>
-      )}
+      {/* Mobile Dropdown 
+        Wrapped in AnimatePresence so the exit animation actually fires.
+      */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="
+              lg:hidden overflow-hidden
+              bg-white/95 dark:bg-[#111111]/95 backdrop-blur-xl
+              border-b border-zinc-200 dark:border-zinc-800
+            "
+          >
+            <div className="px-6 py-8">
+              <NavLinks type="dropdown" classy />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
     </header>
   );
 }
