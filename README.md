@@ -1,111 +1,52 @@
+<div align="center">
+  <h1 align="center">Damian.dev 🌐</h1>
+  <p align="center">
+    <strong>A high-performance, minimalist software engineering portfolio and professional brand website.</strong>
+  </p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  </p>
+</div>
 
-# 🌐 Damian.dev — Personal Developer Portfolio
+<br />
 
-A sleek, modern, and professional developer portfolio website designed to showcase projects, skills, experience, and personal branding. Built to be fast, clean, and visually striking — perfect for presenting yourself as a world‑class engineer.
+<div align="center">
+ 
+  <img src="https://res.cloudinary.com/dtytb8qrc/image/upload/v1782390006/screencapture-damiandev-netlify-app-2026-06-25-12_16_48_2_vujwx2.png" alt="Damian.dev Portfolio Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
----
+<br />
 
-## 🖼️ Landing Page Preview
+## 📖 Overview
 
-![Damian.dev Preview](https://res.cloudinary.com/dtytb8qrc/image/upload/v1764887810/damian.dev_lhq62m.png)
+**Damian.dev** is a modern, production-grade personal portfolio website meticulously engineered to showcase software projects, technical skill sets, and professional experience. Designed with a strict focus on digital minimalism and fluid typography, the platform serves as a centralized hub for technical recruitment and professional networking.
 
----
+By utilizing the Next.js App Router, React Server Components (RSCs), and fine-tuned asset optimization, the platform guarantees near-instantaneous Core Web Vitals, seamless client-side page transitions, and top-tier SEO discoverability.
 
-## ✨ Features
+## ✨ Engineering Highlights
 
-- 🎨 **Minimal, clean, and modern UI**
-- ⚡ **Fast performance & optimized layout**
-- 📱 **Fully responsive across all devices**
-- 🧭 Smooth navigation & layout structure
-- 🧩 Modular components for easy updates
-- 🛠️ Built for scalability as your portfolio grows
+*   **Apple-Inspired Aesthetic:** A sleek, dark-themed, minimalist user interface designed to maximize content scannability and professional impact.
+*   **Fluid Motion Design:** Micro-interactions and smooth page/component transitions powered by Framer Motion, elevating the user experience without sacrificing performance.
+*   **Component-Driven Architecture:** A modular, completely decoupled directory structure that allows sections (Projects, Skills, Experience) to be updated or refactored independently.
+*   **Rigid Type Safety:** End-to-end TypeScript implementation ensuring code reliability, predictable state management, and clear interface contracts.
+*   **Responsive Fluidity:** Engineered using a mobile-first philosophy to ensure pixel-perfect presentation across micro-displays, tablets, and ultrawide monitors.
 
----
+## 🧰 Technical Specification & Tooling
 
-## 🧰 Tech Stack
+*   **Core Framework:** Next.js (App Router Architecture)
+*   **Language Runtime:** TypeScript 
+*   **Styling Engine:** Tailwind CSS + PostCSS
+*   **Animation Library:** Framer Motion
+*   **Quality Assurance:** ESLint & Prettier automated formatting guidelines
 
-- **Next.js**
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion** (if used)
-- **Modern component architecture**
+## 🚀 Local Deployment
 
----
+Ensure you have Node.js 18.x or above installed on your local machine before proceeding.
 
-## 🚀 Getting Started
-
-Clone and run the project locally:
-
+**1. Clone the repository**
 ```bash
-# Clone the repository
-git clone https://github.com/Sophianx234/Damian.dev.git
+git clone [https://github.com/sophianx243/Damian.dev.git](https://github.com/sophianx243/Damian.dev.git)
 cd Damian.dev
-
-# Install dependencies
-npm install   # or yarn / pnpm / bun
-
-# Run dev server
-npm run dev
-```
-
-Visit: **http://localhost:3000**
-
----
-
-## 📂 Project Structure
-
-```
-Damian.dev/
- ├── app/               # App router pages
- ├── components/        # Reusable UI components
- ├── public/            # Images, icons, static assets
- ├── styles/            # Global style files
- ├── utils/             # Helpers, functions
- ├── next.config.ts     # Next.js configuration
- └── README.md
-```
-
----
-
-## 🎨 Customization Guide
-
-You can easily customize:
-
-- Hero text, name, tagline, call‑to‑action
-- Portfolio project cards
-- Skills & tools section
-- Contact section
-- Themes, fonts, colors, animations
-- Add blog, case studies, resume link, etc.
-
----
-
-## 🛠️ Roadmap & Future Enhancements
-
-Suggested additions:
-
-- 📝 Blog section  
-- 🎬 Animated transitions  
-- 📄 Dynamic resume viewer  
-- 🌙 Light/dark mode  
-- 📨 Contact form with backend  
-- 🧪 Project pages with full case‑study breakdown  
-
----
-
-## 🤝 Contributing
-
-Feel free to submit issues or open pull requests to improve the project.
-
----
-
-## 📜 License
-
-You may add a license file if you plan to make this open‑source.
-
----
-
-## 💼 Author
-
-**Damian** — A passionate and evolving software developer focused on modern digital experiences.
-
