@@ -20,7 +20,7 @@ function Handles({type}) {
 
             </NavLink>
             </div>
-           {!type&& <a href="./abdulRahman.pdf" className="font-semibold bg-zinc-700  dark:bg-white dark:text-[#3F3F46] text-white  px-6 py-3 rounded-full dark:hover:scale-105 hover:scale-105 transition-all duration-500 ">Download Resume</a>}
+           {!type&& <a href="./Sophian_Abdul_Rahman_CV.pdf" className="font-semibold bg-zinc-700  dark:bg-white dark:text-[#3F3F46] text-white  px-6 py-3 rounded-full dark:hover:scale-105 hover:scale-105 transition-all duration-500 ">Download Resume</a>}
         </div>
     )
 }

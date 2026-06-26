@@ -13,28 +13,28 @@ const services = [
   {
     id: "01",
     title: "Front-end Architecture",
-    description: "Building highly responsive, SEO-optimized user interfaces with a strict focus on performance, accessibility, and fluid micro-interactions.",
+    description: "Building fast and beautiful websites that look great on any device. I focus on making sure your site is easy to use, ranks well on search engines, and provides a smooth experience for every visitor.",
     tags: ["Next.js", "React", "Tailwind CSS"],
     Icon: MonitorSmartphone,
   },
   {
     id: "02",
     title: "Back-end Engineering",
-    description: "Designing robust server-side logic, secure REST APIs, and scalable microservices that drive complex business operations.",
+    description: "Designing strong and secure background systems that keep your applications running safely. I build the reliable foundation needed to support and power your complex business operations.",
     tags: ["ASP.NET", "Node.js", "Express", "TypeScript"],
     Icon: Server,
   },
   {
     id: "03",
     title: "Database Management",
-    description: "Architecting efficient relational and NoSQL data schemas, optimizing queries, and managing high-availability storage solutions.",
+    description: "Organizing and managing your data so it is always secure, accurate, and quick to access. I make sure your information is stored efficiently and is always available whenever you need it.",
     tags: ["MongoDB", "PostgreSQL", "Redis"],
     Icon: Database,
   },
   {
     id: "04",
     title: "Cloud & DevOps",
-    description: "Containerizing applications for consistent deployment and orchestrating scalable infrastructure to ensure zero-downtime and high availability.",
+    description: "Setting up reliable hosting and deployment systems so your applications stay online without interruption. I make sure your software runs perfectly and can easily scale as your business grows.",
     tags: ["Docker", "Kubernetes", "CI/CD"],
     Icon: Box, // Replaced the Bug icon
   },
@@ -96,9 +96,9 @@ function ServicesSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-sm md:text-right"
+            className="text-base md:text-md text-zinc-600 dark:text-zinc-400 max-w-sm "
           >
-            Delivering comprehensive, end-to-end web solutions tailored to scale your business logic and engage your users.
+            Delivering complete and reliable web solutions built to help your business grow and keep your users happy.
           </motion.p>
         </div>
 
@@ -146,7 +146,7 @@ function ServiceCard({ id, title, description, tags, Icon }) {
         <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
           {title}
         </h3>
-        <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
+        <p className="text-base md:text-md text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
           {description}
         </p>
       </div>

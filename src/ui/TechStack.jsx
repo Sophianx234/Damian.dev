@@ -1,33 +1,45 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Smartphone, 
-  Server, 
-  Box, 
-  Network,
-  Database,
-  Code2,
-  GitMerge,
-  Terminal,
+import {
   Atom,
-  Triangle,
-  Braces
+  Box,
+  Braces,
+  Code2,
+  Database,
+  GitMerge,
+  Network,
+  Server,
+  Smartphone,
+  Terminal,
+  Triangle
 } from "lucide-react";
 
-// Updated to reflect an Enterprise, DevOps, and Mobile architecture
+// 1. Import SVGs as React components using Vite's ?react suffix
+import NextSvg from '../../public/svgs/n-1.svg?react';
+import ReactSvg from '../../public/svgs/r-2.svg?react';
+import TypescriptSvg from '../../public/svgs/t-1.svg?react';
+import NodeSvg from '../../public/svgs/node-1.svg?react';
+import DotNetSvg from '../../public/svgs/dot-4.svg?react';
+import DockerSvg from '../../public/svgs/dock-3.svg?react';
+import KubernetesSvg from '../../public/svgs/k-2.svg?react';
+import CsharpSvg from '../../public/svgs/c-4.svg?react';
+import PostgresSvg from '../../public/svgs/pg-1.svg?react';
+import CicdSvg from '../../public/svgs/loop-1.svg?react';
+import GitSvg from '../../public/svgs/git-1.svg?react';
+
+// 2. Map the imported components to the 'Svg' property
 const techItems = [
-  { name: "Next.js", role: "React Framework", Icon: Triangle },
-  { name: "React", role: "Core UI Library", Icon: Atom },
-  { name: "TypeScript", role: "Type Safety", Icon: Braces },
-  { name: "Node.js", role: "Backend Runtime", Icon: Server },
-  { name: "React Native", role: "Mobile Architecture", Icon: Smartphone },
-  { name: ".NET Core", role: "Enterprise Backend", Icon: Server },
-  { name: "Docker", role: "Containerization", Icon: Box },
-  { name: "Kubernetes", role: "Orchestration", Icon: Network },
-  { name: "C#", role: "Primary Language", Icon: Code2 },
-  { name: "PostgreSQL", role: "Relational Database", Icon: Database },
-  { name: "CI/CD", role: "Deployment Pipeline", Icon: Terminal },
-  { name: "Git Workflow", role: "Version Control", Icon: GitMerge },
+  { name: "Next.js", role: "React Framework", Icon: Triangle, Svg: NextSvg },
+  { name: "React", role: "Core UI Library", Icon: Atom, Svg: ReactSvg },
+  { name: "TypeScript", role: "Type Safety", Icon: Braces, Svg: TypescriptSvg },
+  { name: "Node.js", role: "Backend Runtime", Icon: Server, Svg: NodeSvg },
+  { name: "React Native", role: "Mobile Architecture", Icon: Smartphone, Svg: ReactSvg },
+  { name: ".NET Core", role: "Enterprise Backend", Icon: Server, Svg: DotNetSvg },
+  { name: "Docker", role: "Containerization", Icon: Box, Svg: DockerSvg },
+  { name: "Kubernetes", role: "Orchestration", Icon: Network, Svg: KubernetesSvg },
+  { name: "C#", role: "Primary Language", Icon: Code2, Svg: CsharpSvg },
+  { name: "PostgreSQL", role: "Relational Database", Icon: Database, Svg: PostgresSvg },
+  { name: "CI/CD", role: "Deployment Pipeline", Icon: Terminal, Svg: CicdSvg },
+  { name: "Git Workflow", role: "Version Control", Icon: GitMerge, Svg: GitSvg },
 ];
 
 function TechStack() {
@@ -61,9 +73,9 @@ function TechStack() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-base md:text-lg font-medium text-zinc-500 dark:text-zinc-400 max-w-sm md:text-right"
+            className="text-base md:text-md font-medium text-zinc-500 dark:text-zinc-400 max-w-sm "
           >
-            Engineering scalable enterprise backends, containerized infrastructure, and seamless cross-platform mobile experiences.
+            Building fast, reliable applications and smooth mobile experiences using the best tools available.
           </motion.p>
         </div>
 
@@ -79,7 +91,7 @@ function TechStack() {
 }
 
 function TechCard({ item, index }) {
-  const { name, role, Icon } = item;
+  const { name, role, Icon, Svg } = item;
 
   return (
     <motion.div
@@ -87,7 +99,7 @@ function TechCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ 
         duration: 0.5, 
-        delay: index * 0.05, // Staggered reveal
+        delay: index * 0.05,
         ease: "easeOut"
       }}
       viewport={{ once: true }}
@@ -101,9 +113,9 @@ function TechCard({ item, index }) {
         />
       </div>
 
-      {/* Top Section: Small Icon */}
+      {/* Top Section: SVG rendered as a React component to inherit text colors */}
       <div className="z-10 text-zinc-900 dark:text-white">
-        <Icon className="w-8 h-8" strokeWidth={1.5} />
+        {Svg && <Svg className="w-20 h-16 fill-current" />}
       </div>
 
       {/* Bottom Section: Text */}

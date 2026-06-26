@@ -6,19 +6,19 @@ import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: "01",
-    quote: "Damian doesn't just write code; he architects solutions. His ability to translate our complex operational requirements into a streamlined, high-performance internal tool was exceptional.",
+    quote: "Damian doesn't just write code; he builds real solutions. He did an amazing job turning our complicated business needs into a fast and easy-to-use internal tool.",
     author: "Operations Director",
     context: "Banking & Investment Sector",
   },
   {
     id: "02",
-    quote: "Working with Damian at AncoreXHub has been a masterclass in modern engineering. He has a rare grasp of both scalable backend systems and pixel-perfect mobile interfaces.",
+    quote: "Working with Damian at AncoreXHub has been an incredible experience. He has a rare talent for building both strong background systems and beautiful, flawless mobile apps.",
     author: "Co-Founder & Product Lead",
     context: "AncoreXHub",
   },
   {
     id: "03",
-    quote: "A remarkably forward-thinking engineer. His deployment of containerized architecture for the PropTech platform demonstrated a level of maturity usually seen in senior enterprise architects.",
+    quote: "A truly forward-thinking developer. The way he set up the hosting and structure for our real estate platform showed a level of skill you usually only see in highly experienced professionals.",
     author: "Technical Advisor",
     context: "WunkateHomes Project",
   }

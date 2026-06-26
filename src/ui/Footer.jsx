@@ -37,8 +37,8 @@ function Footer({ type }) {
             </h3>{" "}
             {/* Logo/Brand Name */}
             <p className="text-sm text-[#A0A2A8] leading-relaxed">
-              Crafting modern, responsive, and visually stunning digital
-              experiences. Let's build something exceptional together.
+              Creating fast, beautiful, and easy-to-use digital
+              experiences. Let's build something amazing together.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ function Footer({ type }) {
         <div className="md:max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           {/* Copyright */}
           <p className="text-[#A0A2A8] font-light text-xs md:text-sm order-2 md:order-1 mt-4 md:mt-0">
-            Copyright &copy; 2024. All rights are reserved
+            Copyright &copy; {new Date().getFullYear()}. All rights reserved.
           </p>
 
           {/* Handles (Social Icons) and Attribution */}

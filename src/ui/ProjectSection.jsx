@@ -8,9 +8,9 @@ const projectsData = [
     id: "01",
     name: "Dasaug",
     category: "Community Platform",
-    description: "A dedicated platform built for the Dagbon Students Association, University of Ghana Chapter. It serves as a central hub for students to stay connected, access important information, explore cultural activities, and engage with the community.",
+    description: "A dedicated platform built for the Dagbon Students Association at the University of Ghana. It acts as a central hub where students can easily stay connected, find important updates, explore cultural events, and engage with their community.",
     tech: ["React", "Tailwind CSS", "Node.js"], // You can adjust these
-    liveLink: "https://dasaug.vercel.app/",
+    liveLink: "https://dasaug.netlify.app/",
     githubLink: "https://github.com/Sophianx234/dasa-web",
     image: "./images/p-1.png" 
   },
@@ -18,7 +18,7 @@ const projectsData = [
     id: "02",
     name: "ACFITC",
     category: "Nonprofit Foundation",
-    description: "A platform built for a nonprofit foundation dedicated to empowering underserved communities. It highlights the foundation’s mission, ongoing projects, impact stories, and ways people can get involved to drive social change.",
+    description: "A welcoming platform created for a nonprofit foundation focused on empowering underserved communities. It clearly shares the foundation's mission, showcases ongoing projects and success stories, and offers easy ways for visitors to get involved and help make a difference.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript"], // You can adjust these
     liveLink: "https://acfitc.vercel.app/",
     githubLink: "https://github.com/Sophianx234/acfitc",
@@ -28,7 +28,7 @@ const projectsData = [
     id: "03",
     name: "Wunkat Estate",
     category: "Real Estate & PropTech",
-    description: "A clean and modern real estate platform designed to showcase premium properties with clarity and style. Provides users with an easy way to explore listings, view property details, and experience a smooth, professional navigation experience.",
+    description: "A clean and modern real estate platform designed to beautifully showcase premium properties. It gives users a simple and enjoyable way to browse listings, check out property details, and experience smooth and professional navigation.",
     tech: ["React", "Tailwind CSS", "Express"], // You can adjust these
     liveLink: "https://wunkathomes.vercel.app/",
     githubLink: "https://github.com/Sophianx234/wunkat-estate",
@@ -36,9 +36,19 @@ const projectsData = [
   },
   {
     id: "04",
+    name: "BKC Engineering Solutions",
+    category: "Renewable Energy & Clean Tech",
+    description: "A premium and modern website built for a top solar energy company in Ghana. It features smooth scrolling, a layout that works perfectly on any device, an interactive product catalog, and easy navigation to beautifully display their solar products and engineering services.",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    liveLink: "https://bkcengineering.vercel.app/", // Update with the actual deployed link
+    githubLink: "https://github.com/Sophianx234/bkc-engineering-v2", // Update with your actual repo
+    image: "/images/p-5.png" // Update with a screenshot of the BKC site
+  },
+  {
+    id: "05",
     name: "Rammys Closet",
     category: "E-Commerce",
-    description: "A sleek and user-friendly cosmetics website that allows users to explore, select, and order a wide range of beauty products. Features curated collections, detailed product information, and a smooth shopping experience.",
+    description: "A sleek and easy-to-use cosmetics website where visitors can explore, choose, and order from a wide variety of beauty products. It features carefully selected collections, clear product details, and a completely smooth shopping experience.",
     tech: ["Next.js", "Tailwind CSS", "MongoDB"], // You can adjust these
     liveLink: "https://rammys-closet.vercel.app/",
     githubLink: "https://github.com/Sophianx234/rammys-closet",
@@ -79,7 +89,7 @@ function ProjectSection() {
             viewport={{ once: true }}
             className="mt-6 text-lg font-medium text-slate-600 dark:text-gray-300"
           >
-            Each project is a unique piece of development architecture.
+            A collection of my favorite projects, each built carefully from the ground up.
           </motion.p>
         </div>
 

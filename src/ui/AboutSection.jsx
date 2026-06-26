@@ -39,10 +39,10 @@ const CustomModal = ({ isOpen, onClose }) => {
             
             <div className="space-y-6 text-zinc-300 dark:text-zinc-600 text-base md:text-lg leading-relaxed">
               <p>
-                My approach extends beyond writing code. I am deeply invested in mastering the "software business language"—understanding product lifecycles, user needs, and pitching technical architecture effectively to stakeholders and clients.
+                My approach extends beyond writing code. I care deeply about understanding the business side of software. I enjoy learning about product lifecycles, figuring out what users truly need, and clearly explaining technical decisions to clients and stakeholders.
               </p>
               <p>
-                Whether I am engineering internal corporate tools for banking operations or architecting media streaming APIs, my goal is always to bridge the gap between complex backend infrastructure and seamless, accessible user interfaces. I thrive on leading feature development from concept to deployment within modern, scalable ecosystems.
+                Whether I am building internal tools for banking operations or creating media streaming systems, my goal is always to connect complex background systems with smooth, easy-to-use interfaces. I love taking a new feature all the way from a simple idea to a fully launched product.
               </p>
             </div>
           </motion.div>
@@ -139,10 +139,10 @@ function AboutSection() {
 
             <div className="space-y-6 text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12">
               <p>
-                I am a Software Engineer specializing in scalable enterprise infrastructure and cross-platform mobile applications. Currently operating within the banking and investment sector, I focus on translating complex business requirements into secure, high-performance systems.
+                I am a Software Engineer who specializes in building reliable business systems and seamless mobile applications. Currently, I work in the banking and investment sector, where I focus on turning complex business needs into secure and fast software.
               </p>
               <p>
-                As the Founder and Lead Engineer at AncoreXHub, I direct technical architecture and team strategy, bridging the gap between modern front-end ecosystems and robust, containerized backends to deliver end-to-end solutions.
+                As the Founder and Lead Engineer at AncoreXHub, I guide our technical direction and team strategy. I connect modern website designs with strong, reliable background systems to deliver complete, finished products.
               </p>
             </div>
             

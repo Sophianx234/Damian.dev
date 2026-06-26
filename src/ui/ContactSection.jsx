@@ -65,10 +65,10 @@ function ContactSection() {
           >
             <div>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
-                Let's build something scalable.
+                Let's build something amazing together.
               </h3>
               <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-md">
-                Whether you are looking to architect an enterprise backend, launch a cross-platform mobile application, or discuss a potential role, my inbox is open.
+                Whether you want to build a secure background system, launch a beautiful new mobile app, or just chat about an opportunity, I would love to hear from you. My inbox is always open!
               </p>
             </div>
 
@@ -158,7 +158,7 @@ function ContactSection() {
                 whileHover={{ x: 5 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {isSubmitting ? "Transmitting..." : "Send Dispatch"}
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
               </motion.button>
               

@@ -9,35 +9,35 @@ const capabilitiesData = [
     title: "Modern Web Applications",
     icon: Layout,
     tech: "Next.js • Node.js • TypeScript • Tailwind",
-    description: "Building fast, SEO-optimized, and highly responsive web applications. Leveraging server-side rendering, type-safe logic, and utility-first styling for premium user experiences."
+    description: "Creating fast, beautiful, and easy-to-use websites that work perfectly on any device and rank well on search engines."
   },
   {
     id: "02",
     title: "Cross-Platform Mobile",
     icon: Smartphone,
     tech: "React Native • Expo • TypeScript",
-    description: "Architecting fluid, native-feeling mobile applications for iOS and Android. Focused on high performance, complex state management, and seamless native module integration."
+    description: "Building smooth and engaging mobile apps for both iOS and Android that feel completely natural and intuitive to use."
   },
   {
     id: "03",
     title: "Enterprise Backends",
     icon: Server,
     tech: ".NET Core • C# • REST APIs",
-    description: "Designing robust, highly scalable server-side architectures. Building secure APIs and microservices tailored for banking operations, investment platforms, and large-scale data processing."
+    description: "Developing secure and reliable behind-the-scenes systems that power your business and handle complex operations effortlessly."
   },
   {
     id: "04",
     title: "Cloud & DevOps",
     icon: Box,
     tech: "Docker • Kubernetes • CI/CD",
-    description: "Containerizing applications for consistent deployment across environments. Orchestrating scalable infrastructure to ensure zero-downtime deployments and high availability."
+    description: "Setting up solid, always-online infrastructure so your applications run smoothly and update without any interruptions."
   },
   {
     id: "05",
     title: "Data Architecture",
     icon: Database,
     tech: "SQL Server • MongoDB • Redis",
-    description: "Structuring complex relational and NoSQL databases. Optimizing queries, managing state, and ensuring data integrity for high-stakes business logic and user platforms."
+    description: "Designing smart, organized databases to keep your important business information secure, accurate, and instantly accessible."
   }
 ];
 
@@ -73,9 +73,9 @@ function CapabilitiesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="mt-8 text-lg font-medium text-zinc-500 dark:text-zinc-400 leading-relaxed"
+            className="mt-8 text-md font-medium text-zinc-500 dark:text-zinc-400 leading-relaxed"
           >
-            I architect end-to-end solutions—from scalable enterprise backends and containerized infrastructure to high-performance web and mobile interfaces.
+            I build complete digital solutions from start to finish. I create everything from solid behind-the-scenes systems to beautiful web and mobile apps you can rely on.
           </motion.p>
         </div>
 
@@ -145,7 +145,7 @@ function AccordionItem({ item, isOpen, onClick, index }) {
                 <p className="text-sm font-mono uppercase tracking-widest text-zinc-900 dark:text-white mb-3">
                   {tech}
                 </p>
-                <p className="text-base md:text-lg leading-relaxed max-w-xl">
+                <p className="text-base md:text-md leading-relaxed max-w-xl">
                   {description}
                 </p>
               </div>

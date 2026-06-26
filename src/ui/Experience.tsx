@@ -11,7 +11,7 @@ const experienceData = [
     date: "Late 2025 - Present",
     location: "Accra, Ghana",
     description: 
-      "Developing and maintaining software solutions within a high-stakes banking operations and investment environment. Engineered 'RepublicLunch', a full-stack application that successfully streamlined internal food ordering and administrative tracking for workplace staff.",
+      "I build and maintain software solutions for the fast-paced banking and investment sector. One of my key projects was creating 'RepublicLunch', a full-stack application that made it much easier for staff to order food and track administrative tasks at work.",
     icon: Building2,
   },
   {
@@ -21,7 +21,7 @@ const experienceData = [
     date: "Early 2026 - Present",
     location: "Accra, Ghana",
     description: 
-      "Founded and leading a four-member software engineering startup. Directing weekly team strategy, technical architecture, and the continuous development of modern, scalable web and mobile applications.",
+      "I founded and currently lead a startup with a team of four software engineers. I guide our weekly strategy, make key technical decisions, and oversee the development of modern websites and mobile apps.",
     icon: Rocket,
   },
   {
@@ -31,7 +31,7 @@ const experienceData = [
     date: "Graduated Feb 2026",
     location: "Accra, Ghana",
     description: 
-      "Completed comprehensive degree program with a strong focus on modern software development methodologies, preparing for a seamless transition into enterprise engineering.",
+      "I completed a comprehensive degree program focused on modern software development. This gave me a strong foundation and prepared me perfectly for a career in professional software engineering.",
     icon: GraduationCap,
   }
 ];
