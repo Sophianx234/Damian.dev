@@ -31,7 +31,7 @@ const projectsData = [
     description: "A clean and modern real estate platform designed to beautifully showcase premium properties. It gives users a simple and enjoyable way to browse listings, check out property details, and experience smooth and professional navigation.",
     tech: ["React", "Tailwind CSS", "Express"], // You can adjust these
     liveLink: "https://wunkathomes-v2-t5wg.vercel.app/",
-    githubLink: "https://github.com/Sophianx234/wunkat-estate",
+    githubLink: "https://github.com/Sophianx234/wunkathomes-v2",
     image: "./images/p-3.png"
   },
   {
