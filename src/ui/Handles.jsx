@@ -10,7 +10,7 @@ function Handles({type}) {
         ">
 
 
-            <NavLink to='https://www.linkedin.com/in/sophian-abdul-rahman-909125230/'>
+            <NavLink to='www.linkedin.com/in/sophian-abdul-rahman/'>
 
             <IoLogoLinkedin className={`hover:fill-secondary-purple transition-all duration-200 block dark:fill-white  ${type&& 'size-8 inline-block'}`} size={type? 46:36} color={`${type?'#fff':'#3F3F46'}`}/>
             </NavLink>
