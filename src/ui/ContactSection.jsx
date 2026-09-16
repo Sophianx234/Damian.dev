@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, ArrowRight, Linkedin, Github } from "lucide-react";
 
 function ContactSection() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({ name: "", service: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,15 +12,15 @@ function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Form Submitted:", formData);
-      alert("Message received. I'll be in touch shortly.");
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
+    const { name, service, message } = formData;
+    
+    const text = `Hello, my name is ${name}.\n\nI am interested in: ${service}\n\nMessage:\n${message}`;
+    const encodedText = encodeURIComponent(text);
+    // Using 233 (Ghana country code) based on the location
+    const whatsappUrl = `https://wa.me/233554802687?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   const inputClasses = "w-full py-4 bg-transparent border-b border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors rounded-none";
@@ -92,7 +91,7 @@ function ContactSection() {
 
             {/* Socials */}
             <div className="flex items-center gap-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+              <a href="www.linkedin.com/in/sophian-abdul-rahman" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -126,16 +125,21 @@ function ContactSection() {
               </div>
 
               <div className="group relative">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
                   onChange={handleChange}
                   required
-                  className={inputClasses}
-                  placeholder="Email Address"
-                />
+                  className={`${inputClasses} appearance-none bg-transparent`}
+                >
+                  <option value="" disabled className="text-zinc-500 dark:text-zinc-400 bg-white dark:bg-zinc-900">Select a Service</option>
+                  <option value="Web Development" className="text-zinc-900 dark:text-white bg-white dark:bg-zinc-900">Web Development</option>
+                  <option value="Mobile App Development" className="text-zinc-900 dark:text-white bg-white dark:bg-zinc-900">Mobile App Development</option>
+                  <option value="UI/UX Design" className="text-zinc-900 dark:text-white bg-white dark:bg-zinc-900">UI/UX Design</option>
+                  <option value="Backend System" className="text-zinc-900 dark:text-white bg-white dark:bg-zinc-900">Backend System</option>
+                  <option value="General Inquiry" className="text-zinc-900 dark:text-white bg-white dark:bg-zinc-900">General Inquiry</option>
+                </select>
               </div>
 
               <div className="group relative">
@@ -153,12 +157,11 @@ function ContactSection() {
 
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
-                className="group flex items-center gap-4 py-4 pr-6 text-lg font-bold tracking-tight text-zinc-900 dark:text-white uppercase transition-opacity hover:opacity-70 disabled:opacity-50"
+                className="group flex items-center gap-4 py-4 pr-6 text-lg font-bold tracking-tight text-zinc-900 dark:text-white uppercase transition-opacity hover:opacity-70"
                 whileHover={{ x: 5 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                Send Message
                 <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
               </motion.button>
               
