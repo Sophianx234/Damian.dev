@@ -10,7 +10,7 @@ const projectsData = [
     category: "Community Platform",
     description: "A dedicated platform built for the Dagbon Students Association at the University of Ghana. It acts as a central hub where students can easily stay connected, find important updates, explore cultural events, and engage with their community.",
     tech: ["React", "Tailwind CSS", "Node.js"], // You can adjust these
-    liveLink: "https://dasaug.netlify.app/",
+    liveLink: "https://dasaug.com/",
     githubLink: "https://github.com/Sophianx234/dasa-web",
     image: "./images/p-1.png" 
   },
@@ -30,7 +30,7 @@ const projectsData = [
     category: "Real Estate & PropTech",
     description: "A clean and modern real estate platform designed to beautifully showcase premium properties. It gives users a simple and enjoyable way to browse listings, check out property details, and experience smooth and professional navigation.",
     tech: ["React", "Tailwind CSS", "Express"], // You can adjust these
-    liveLink: "https://wunkathomes-v2-t5wg.vercel.app/",
+    liveLink: "https://wunkathomes.com",
     githubLink: "https://github.com/Sophianx234/wunkathomes-v2",
     image: "./images/p-3.png"
   },
@@ -40,17 +40,17 @@ const projectsData = [
     category: "Renewable Energy & Clean Tech",
     description: "A premium and modern website built for a top solar energy company in Ghana. It features smooth scrolling, a layout that works perfectly on any device, an interactive product catalog, and easy navigation to beautifully display their solar products and engineering services.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    liveLink: "https://bkcengineering.vercel.app/", // Update with the actual deployed link
+    liveLink: "https://bkcengineering.com/", // Update with the actual deployed link
     githubLink: "https://github.com/Sophianx234/bkc-engineering-v2", // Update with your actual repo
     image: "/images/p-5.png" // Update with a screenshot of the BKC site
   },
   {
     id: "05",
-    name: "Rammys Closet",
+    name: "Rammys Radiance",
     category: "E-Commerce",
     description: "A sleek and easy-to-use cosmetics website where visitors can explore, choose, and order from a wide variety of beauty products. It features carefully selected collections, clear product details, and a completely smooth shopping experience.",
     tech: ["Next.js", "Tailwind CSS", "MongoDB"], // You can adjust these
-    liveLink: "https://rammys-closet.vercel.app/",
+    liveLink: "https://rammysradiance.com/",
     githubLink: "https://github.com/Sophianx234/rammys-closet",
     image: "./images/p-4.png"
   }
@@ -119,11 +119,11 @@ function ProjectCard({ project, index }) {
     >
       
       {/* Image Container */}
-      <div className="w-full lg:w-3/5 group relative overflow-hidden bg-zinc-200 dark:bg-zinc-800 aspect-[4/3] sm:aspect-video lg:aspect-[4/3] shadow-lg dark:shadow-2xl">
+      <div className="w-full lg:w-3/5 group relative overflow-hidden bg-zinc-200 dark:bg-zinc-800 aspect-[4/3] sm:aspect-video lg:aspect-[4/3] ">
         <img 
           src={project.image} 
           alt={`Screenshot of ${project.name}`}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-in-out"
+          className="w-full h-full object-cover object-top  transition-transform duration-700 ease-in-out"
         />
         
         {/* Subtle overlay on hover */}
