@@ -91,7 +91,7 @@ function ContactSection() {
 
             {/* Socials */}
             <div className="flex items-center gap-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-              <a href="www.linkedin.com/in/sophian-abdul-rahman" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/sophian-abdul-rahman" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
